@@ -733,35 +733,41 @@
     </section>
 
     <!-- Email Capture -->
-    <section class="email-capture" id="email">
-        <div class="container">
-            <div class="section-header">
-                <h2 style="color: var(--dark);">Join the Inner Circle</h2>
-                <p style="color: var(--dark); opacity: 0.9;">Get exclusive behind-the-scenes updates, work-in-progress animation reels, and early access to investment opportunities before they go public.</p>
-            </div>
+<form class="email-form" id="emailForm">
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="FNAME" required>
+    </div>
 
-            <form class="email-form" id="emailForm">
-                <div class="form-group">
-                    <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName" required>
-                </div>
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="EMAIL" required>
+    </div>
 
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+    <div class="form-group">
+        <label for="interest">I'm interested in investing at: (Optional)</label>
+        <select id="interest" name="MMERGE3">
+            <option value="">Just Updates</option>
+            <option value="1k-2.5k">$1K - $2.5K (Believer Patron)</option>
+            <option value="2.5k-5k">$2.5K - $5K (Community Supporter)</option>
+            <option value="5k-10k">$5K - $10K (Supporting Investor)</option>
+            <option value="10k-20k">$10K - $20K (Associate Producer)</option>
+            <option value="20k+">$20K+ (Executive Producer)</option>
+        </select>
+    </div>
 
-                <div class="form-group">
-                    <label for="interest">I'm interested in investing at: (Optional)</label>
-                    <select id="interest" name="interest">
-                        <option value="">Just Updates</option>
-                        <option value="1k-2.5k">$1K - $2.5K (Believer Patron)</option>
-                        <option value="2.5k-5k">$2.5K - $5K (Community Supporter)</option>
-                        <option value="5k-10k">$5K - $10K (Supporting Investor)</option>
-                        <option value="10k-20k">$10K - $20K (Associate Producer)</option>
-                        <option value="20k+">$20K+ (Executive Producer)</option>
-                    </select>
-                </div>
+    <button type="submit" class="btn btn-primary" style="width: 100%;">Get Exclusive Updates →</button>
+
+    <p class="privacy-note">
+        🔒 We respect your inbox. Updates sent monthly. Unsubscribe anytime. No spam, ever.
+    </p>
+
+    <!-- Success message -->
+    <p id="successMessage" style="display:none; color:var(--accent); text-align:center; margin-top:1rem; font-weight:600;">
+        Welcome To The Verse Project!
+    </p>
+</form>
+
 
                 <button type="submit" class="btn btn-primary" style="width: 100%;">Get Exclusive Updates →</button>
 
