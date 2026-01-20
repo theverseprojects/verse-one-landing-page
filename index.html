@@ -1,42 +1,119 @@
-<script>
-    document.getElementById('emailForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const form = e.target;
-        const responseDiv = document.getElementById('formResponse');
-        
-        // 1. Get the values
-        const fname = document.getElementById('firstName').value;
-        const email = document.getElementById('emailInput').value;
-        const interest = document.getElementById('interest').value;
-
-        // 2. Prepare the Mailchimp JSONP URL
-        // We change 'post' to 'post-json' and add '&c=?' for JSONP support
-        const url = "https://gmail.us14.list-manage.com/subscribe/post-json?u=475649f6927ace2359a3cfc50&id=11e7b20f6d" 
-                    + "&FNAME=" + encodeURIComponent(fname) 
-                    + "&EMAIL=" + encodeURIComponent(email) 
-                    + "&INTEREST=" + encodeURIComponent(interest) 
-                    + "&c=jsonpCallback";
-
-        // 3. Create the JSONP script tag
-        const script = document.createElement('script');
-        script.src = url;
-        document.body.appendChild(script);
-
-        // 4. Update the UI immediately
-        form.style.display = 'none';
-        responseDiv.style.display = 'block';
-        responseDiv.innerHTML = "<h3>Processing...</h3>";
-    });
-
-    // 5. This function runs when Mailchimp responds
-    window.jsonpCallback = function(data) {
-        const responseDiv = document.getElementById('formResponse');
-        if (data.result === 'success') {
-            responseDiv.innerHTML = "<h3>Success! 🎬</h3><p>Thank you for joining the journey. Please check your inbox to confirm.</p>";
-        } else {
-            // If there's an error (like 'already subscribed'), show it
-            responseDiv.innerHTML = "<h3>Note</h3><p>" + data.msg + "</p><button onclick='window.location.reload()' class='btn btn-secondary' style='margin-top:10px;'>Try Again</button>";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERSE ONE: The Shearer's Gospel - Faith Animation Investment</title>
+    <meta name="description" content="Invest in VERSE ONE, a groundbreaking 13-minute animated faith film. $195K raise, investment starts at $1,000. Revenue share + producer credits.">
+    
+    <meta property="og:title" content="VERSE ONE: The Shearer's Gospel">
+    <meta property="og:description" content="When Jesus actually shows up to a podcast interview. A 13-minute animated short redefining faith storytelling.">
+    <meta property="og:type" content="website">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    };
-</script>
+
+        :root {
+            --primary: #EFBF04;
+            --secondary: #282861;
+            --accent: #1EA400;
+            --dark: #2C2C2C;
+            --light: #FFF8E6;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.2;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .tagline {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            color: var(--primary);
+        }
+
+        .hero .subtitle {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        .btn-primary { background: var(--primary); color: var(--dark); }
+        .btn-primary:hover { background: #E5B685; transform: translateY(-2px); }
+        .btn-secondary { background: transparent; color: var(--white); border: 2px solid var(--primary); }
+
+        /* Section Styles */
+        section { padding: 5rem 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-header h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
+
+        /* Why Section */
+        .why { background: var(--light); }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .why-card { background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+
+        /* Progress Section */
+        .funding-meter { background: var(--light); padding: 3rem; border-radius: 12px; margin: 2rem 0; text-align: center; }
+        .progress-bar { background: #E0E0E0; height: 40px; border-radius: 20px; overflow: hidden; margin-bottom: 2rem; }
+        .progress-fill { 
+            background: linear-gradient(90deg, var(--accent), var(--primary)); 
+            height: 100%; width: 1%; color
