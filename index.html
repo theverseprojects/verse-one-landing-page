@@ -917,6 +917,51 @@
 
 <!-- Footer -->
 <footer>
-    <div class="footer-content">
-        <h3>VERSE ONE: The Shearer's Gospel</h3>
-        <p st
+        <div class="footer-content">
+            <h3>VERSE ONE: The Shearer's Gospel</h3>
+            <p>© 2026 Verse One Animation.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('button');
+
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = "Sending...";
+
+            // Send to Make.com
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Replace form with Success Message
+                    form.innerHTML = `
+                        <div style="text-align: center; padding: 2rem; animation: fadeInUp 0.5s ease forwards;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">✨</div>
+                            <h3 style="color: var(--secondary); margin-bottom: 1rem;">You're in the Inner Circle!</h3>
+                            <p style="color: #666;">Thank you for joining the journey. We've recorded your interest and will be in touch with exclusive updates soon.</p>
+                        </div>
+                    `;
+                } else {
+                    throw new Error('Network response was not ok.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = "Try Again →";
+                alert("There was an error. Please try again.");
+            });
+        });
+    </script>
+
+</body>
+</html>
