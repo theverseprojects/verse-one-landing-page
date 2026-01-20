@@ -1,211 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VERSE ONE: The Shearer's Gospel - Faith Animation Investment</title>
-    <meta name="description" content="Invest in VERSE ONE, a groundbreaking 13-minute animated faith film. $195K raise, investment starts at $1,000. Revenue share + producer credits.">
-    
-    <meta property="og:title" content="VERSE ONE: The Shearer's Gospel">
-    <meta property="og:description" content="When Jesus actually shows up to a podcast interview. A 13-minute animated short redefining faith storytelling.">
-    <meta property="og:type" content="website">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<script>
+    document.getElementById('emailForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const form = e.target;
+        const responseDiv = document.getElementById('formResponse');
+        
+        // 1. Get the values
+        const fname = document.getElementById('firstName').value;
+        const email = document.getElementById('emailInput').value;
+        const interest = document.getElementById('interest').value;
 
-        :root {
-            --primary: #EFBF04;
-            --secondary: #282861;
-            --accent: #1EA400;
-            --dark: #2C2C2C;
-            --light: #FFF8E6;
-            --white: #FFFFFF;
-        }
+        // 2. Prepare the Mailchimp JSONP URL
+        // We change 'post' to 'post-json' and add '&c=?' for JSONP support
+        const url = "https://gmail.us14.list-manage.com/subscribe/post-json?u=475649f6927ace2359a3cfc50&id=11e7b20f6d" 
+                    + "&FNAME=" + encodeURIComponent(fname) 
+                    + "&EMAIL=" + encodeURIComponent(email) 
+                    + "&INTEREST=" + encodeURIComponent(interest) 
+                    + "&c=jsonpCallback";
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background: var(--white);
-            scroll-behavior: smooth;
-        }
+        // 3. Create the JSONP script tag
+        const script = document.createElement('script');
+        script.src = url;
+        document.body.appendChild(script);
 
-        h1, h2, h3, h4 {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.2;
-        }
+        // 4. Update the UI immediately
+        form.style.display = 'none';
+        responseDiv.style.display = 'block';
+        responseDiv.innerHTML = "<h3>Processing...</h3>";
+    });
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
-            color: var(--white);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            position: relative;
-            overflow: hidden;
+    // 5. This function runs when Mailchimp responds
+    window.jsonpCallback = function(data) {
+        const responseDiv = document.getElementById('formResponse');
+        if (data.result === 'success') {
+            responseDiv.innerHTML = "<h3>Success! 🎬</h3><p>Thank you for joining the journey. Please check your inbox to confirm.</p>";
+        } else {
+            // If there's an error (like 'already subscribed'), show it
+            responseDiv.innerHTML = "<h3>Note</h3><p>" + data.msg + "</p><button onclick='window.location.reload()' class='btn btn-secondary' style='margin-top:10px;'>Try Again</button>";
         }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 50 L50 0 L100 50 L50 100 Z" fill="rgba(212,165,116,0.1)"/></svg>') repeat;
-            opacity: 0.1;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            margin-bottom: 1rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .hero .tagline {
-            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-            margin-bottom: 1.5rem;
-            font-style: italic;
-            color: var(--primary);
-        }
-
-        .hero .subtitle {
-            font-size: clamp(1rem, 2vw, 1.3rem);
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-            font-family: inherit;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: var(--dark);
-        }
-
-        .btn-primary:hover {
-            background: #E5B685;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(212,165,116,0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid var(--primary);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary);
-            color: var(--dark);
-        }
-
-        /* Section Styles */
-        section {
-            padding: 5rem 2rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-header h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            color: var(--dark);
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Why Section */
-        .why {
-            background: var(--light);
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .why-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
-
-        .why-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .why-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .why-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--secondary);
-        }
-
-        .quote {
-            background: var(--secondary);
-            color: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            font-style: italic;
-            font-size: 1.3rem;
-            margin-top: 2rem;
-        }
-
-        .quote cite {
-            display: block;
-            margin-top: 1rem;
-            font-style: normal;
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        /* Progress Section */
-        .progress-section {
+    };
+</script>
