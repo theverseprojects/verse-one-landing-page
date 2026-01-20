@@ -1,899 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VERSE ONE: The Shearer's Gospel - Faith Animation Investment</title>
-    <meta name="description" content="Invest in VERSE ONE, a groundbreaking 13-minute animated faith film. $195K raise, investment starts at $1,000. Revenue share + producer credits.">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="VERSE ONE: The Shearer's Gospel">
-    <meta property="og:description" content="When Jesus actually shows up to a podcast interview. A 13-minute animated short redefining faith storytelling.">
-    <meta property="og:type" content="website">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #EFBF04;
-            --secondary: #282861;
-            --accent: #1EA400;
-            --dark: #2C2C2C;
-            --light: #FFF8E6;
-            --white: #FFFFFF;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background: var(--white);
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.2;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
-            color: var(--white);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 50 L50 0 L100 50 L50 100 Z" fill="rgba(212,165,116,0.1)"/></svg>') repeat;
-            opacity: 0.1;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            margin-bottom: 1rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .hero .tagline {
-            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-            margin-bottom: 1.5rem;
-            font-style: italic;
-            color: var(--primary);
-        }
-
-        .hero .subtitle {
-            font-size: clamp(1rem, 2vw, 1.3rem);
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-            font-family: inherit;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: var(--dark);
-        }
-
-        .btn-primary:hover {
-            background: #E5B685;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(212,165,116,0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid var(--primary);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary);
-            color: var(--dark);
-        }
-
-        /* Section Styles */
-        section {
-            padding: 5rem 2rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-header h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            color: var(--dark);
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Why Section */
-        .why {
-            background: var(--light);
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .why-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
-
-        .why-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .why-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .why-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--secondary);
-        }
-
-        .quote {
-            background: var(--secondary);
-            color: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            font-style: italic;
-            font-size: 1.3rem;
-            margin-top: 2rem;
-        }
-
-        .quote cite {
-            display: block;
-            margin-top: 1rem;
-            font-style: normal;
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        /* Progress Section */
-        .progress-section {
-            background: var(--white);
-        }
-
-        .funding-meter {
-            background: var(--light);
-            padding: 3rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-        }
-
-        .funding-amount {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .funding-amount h3 {
-            font-size: 3rem;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-        }
-
-        .funding-amount p {
-            font-size: 1.2rem;
-            color: #666;
-        }
-
-        .progress-bar {
-            background: #E0E0E0;
-            height: 40px;
-            border-radius: 20px;
-            overflow: hidden;
-            margin-bottom: 2rem;
-        }
-
-        .progress-fill {
-            background: linear-gradient(90deg, var(--accent), var(--primary));
-            height: 100%;
-            width: 60%;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 1rem;
-            color: var(--white);
-            font-weight: 600;
-            transition: width 1s ease;
-        }
-
-        .milestones {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .milestone-group h4 {
-            margin-bottom: 1rem;
-            color: var(--secondary);
-            font-size: 1.3rem;
-        }
-
-        .milestone-group ul {
-            list-style: none;
-        }
-
-        .milestone-group li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .milestone-group li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: bold;
-        }
-
-        .milestone-group.next li::before {
-            content: '🎯';
-        }
-
-        .urgency-banner {
-            background: linear-gradient(135deg, #FF6B6B, #FF8E53);
-            color: var(--white);
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 2rem;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        /* Email Capture */
-        .email-capture {
-            background: linear-gradient(135deg, var(--primary), #E5B685);
-            color: var(--dark);
-        }
-
-        .email-form {
-            max-width: 600px;
-            margin: 2rem auto;
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid #E0E0E0;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .privacy-note {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 1rem;
-        }
-
-        /* Investment Tiers */
-        .tiers {
-            background: var(--light);
-        }
-
-        .value-props {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .value-prop {
-            text-align: center;
-            padding: 2rem;
-            background: var(--white);
-            border-radius: 12px;
-        }
-
-        .value-prop-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .value-prop h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--secondary);
-        }
-
-        .tier-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .tier-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 3px solid transparent;
-        }
-
-        .tier-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 10px 40px rgba(212,165,116,0.2);
-        }
-
-        .tier-card.featured {
-            border-color: var(--primary);
-            position: relative;
-        }
-
-        .tier-card.featured::before {
-            content: '⭐ MOST POPULAR';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary);
-            color: var(--dark);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-        }
-
-        .tier-emoji {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .tier-name {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 0.5rem;
-        }
-
-        .tier-price {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-
-        .tier-benefits {
-            list-style: none;
-            margin: 1.5rem 0;
-            text-align: left;
-        }
-
-        .tier-benefits li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .tier-benefits li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: bold;
-        }
-
-        .big-cta {
-            text-align: center;
-            margin: 4rem 0;
-            padding: 3rem;
-            background: linear-gradient(135deg, var(--secondary), var(--primary));
-            border-radius: 12px;
-        }
-
-        .big-cta h3 {
-            color: var(--white);
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .big-cta .btn {
-            font-size: 1.3rem;
-            padding: 1.5rem 3rem;
-        }
-
-        /* FAQ */
-        .faq {
-            background: var(--white);
-        }
-
-        .faq-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: var(--light);
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .faq-question {
-            padding: 1.5rem;
-            cursor: pointer;
-            font-weight: 600;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.3s ease;
-        }
-
-        .faq-question:hover {
-            background: #E8E3D8;
-        }
-
-        .faq-answer {
-            padding: 0 1.5rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-item.active .faq-answer {
-            padding: 1.5rem;
-            max-height: 500px;
-        }
-
-        .faq-toggle {
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-item.active .faq-toggle {
-            transform: rotate(180deg);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: var(--white);
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .footer-links a {
-            color: var(--primary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: #E5B685;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .social-links a {
-            color: var(--white);
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: var(--primary);
-        }
-
-        /* Sticky CTA Mobile */
-        .sticky-cta {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--primary);
-            padding: 1rem;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
-            z-index: 1000;
-        }
-
-        .sticky-cta .btn {
-            width: 100%;
-            margin: 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            section {
-                padding: 3rem 1.5rem;
-            }
-
-            .sticky-cta {
-                display: block;
-            }
-
-            .tier-cards {
-                grid-template-columns: 1fr;
-            }
-
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            animation: fadeInUp 0.8s ease;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERSE ONE: The Shearer's Gospel - Faith Animation Investment</title>
+    <meta name="description" content="Invest in VERSE ONE, a groundbreaking 13-minute animated faith film. $195K raise, investment starts at $1,000. Revenue share + producer credits.">
+    
+    <meta property="og:title" content="VERSE ONE: The Shearer's Gospel">
+    <meta property="og:description" content="When Jesus actually shows up to a podcast interview. A 13-minute animated short redefining faith storytelling.">
+    <meta property="og:type" content="website">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #EFBF04;
+            --secondary: #282861;
+            --accent: #1EA400;
+            --dark: #2C2C2C;
+            --light: #FFF8E6;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.2;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .tagline {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            color: var(--primary);
+        }
+
+        .hero .subtitle {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        .btn-primary { background: var(--primary); color: var(--dark); }
+        .btn-primary:hover { background: #E5B685; transform: translateY(-2px); }
+        .btn-secondary { background: transparent; color: var(--white); border: 2px solid var(--primary); }
+
+        /* Section Styles */
+        section { padding: 5rem 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-header h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
+
+        /* Why Section */
+        .why { background: var(--light); }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .why-card { background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+
+        /* Progress Section */
+        .funding-meter { background: var(--light); padding: 3rem; border-radius: 12px; margin: 2rem 0; text-align: center; }
+        .progress-bar { background: #E0E0E0; height: 40px; border-radius: 20px; overflow: hidden; margin-bottom: 2rem; }
+        .progress-fill { 
+            background: linear-gradient(90deg, var(--accent), var(--primary)); 
+            height: 100%; width: 1%; color: white; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px;
+        }
+
+        /* Form Styling */
+        .email-capture { background: linear-gradient(135deg, var(--primary), #E5B685); padding: 5rem 2rem; }
+        .email-form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .form-group { margin-bottom: 1.5rem; text-align: left; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+        .form-group input, .form-group select { width: 100%; padding: 0.8rem; border: 2px solid #E0E0E0; border-radius: 8px; }
+
+        #formResponse { display: none; margin-top: 20px; padding: 15px; border-radius: 8px; font-weight: 600; }
+
+        /* Tier Cards */
+        .tier-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .tier-card { background: var(--white); padding: 2rem; border-radius: 12px; border: 3px solid transparent; transition: 0.3s; text-align: center; }
+        .tier-card.featured { border-color: var(--primary); transform: scale(1.05); }
+        .tier-benefits { list-style: none; text-align: left; margin: 1rem 0; }
+        
+        footer { background: var(--dark); color: white; text-align: center; padding: 3rem; }
+    </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content fade-in">
-            <h1>VERSE ONE: The Shearer's Gospel</h1>
-            <p class="tagline">When Jesus Actually Shows Up</p>
-            <p class="subtitle">A 13-minute animated short redefining faith storytelling<br>
-            Raising $195,000 • Investment starts at $1,000</p>
-            <a href="#tiers" class="btn btn-primary">View Investment Tiers</a>
-            <a href="#story" class="btn btn-secondary" style="margin-left: 1rem;">Learn More</a>
-        </div>
-    </section>
 
-    <!-- Why Section -->
-    <section class="why" id="why">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why This Story. Why Now.</h2>
-            </div>
-            
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon">🎭</div>
-                    <h3>Faith Cinema Is Breaking Grounds</h3>
-                    <p>We are exploring new opportunities for Christian filmmaking to reach a new generation. Global audiences are hungry for something real; Gen Z sees through the formula and is ready for stories that capture the reality of encountering God.</p>
-                </div>
-                
-                <div class="why-card">
-                    <div class="why-icon">🌍</div>
-                    <h3>A New Way Forward</h3>
-                    <p>VERSE ONE doesn't preach—it experiences. Through cinematic animation, we journey across continents (Manchester → Syria → South Africa → beyond) and languages (English, Aramaic, Igbo) to show Jesus meeting people where they are.</p>
-                </div>
-                
-                <div class="why-card">
-                    <div class="why-icon">🎯</div>
-                    <h3>Built to Reach the Unreached</h3>
-                    <p>13 minutes designed for festival circuits, streaming platforms, and viral reach. This isn't just a film—it's proof of concept for an anthology series that shows faith as it actually is: diverse, complicated, and beautiful.</p>
-                </div>
-            </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>VERSE ONE: The Shearer's Gospel</h1>
+            <p class="tagline">When Jesus Actually Shows Up</p>
+            <p class="subtitle">A 13-minute animated short redefining faith storytelling<br>
+            Raising $195,000 • Investment starts at $1,000</p>
+            <a href="#email" class="btn btn-primary">Join Inner Circle</a>
+            <a href="#tiers" class="btn btn-secondary" style="margin-left: 1rem;">View Tiers</a>
+        </div>
+    </section>
 
-            <div class="quote">
-                <p>"We are not just making a film; we are breaking ground to reach the unreached. We are capturing the heart of a new generation."</p>
-                <cite>— Oyakhire Russel, Creator</cite>
-            </div>
-        </div>
-    </section>
+    <section class="why">
+        <div class="container">
+            <div class="section-header"><h2>Why This Story. Why Now.</h2></div>
+            <div class="why-grid">
+                <div class="why-card"><h3>🎭 Faith Cinema</h3><p>Global audiences are hungry for real stories that capture the reality of encountering God.</p></div>
+                <div class="why-card"><h3>🌍 A New Way</h3><p>Cinematic animation journeying across Manchester, Syria, and South Africa.</p></div>
+                <div class="why-card"><h3>🎯 Reach Unreached</h3><p>Built for festival circuits and global streaming viral reach.</p></div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Progress Section -->
-    <section class="progress-section" id="progress">
-        <div class="container">
-            <div class="section-header">
-                <h2>Where We Are Now</h2>
-            </div>
+    <section class="email-capture" id="email">
+        <div class="email-form-container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Join the Inner Circle</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #666;">Get exclusive updates and early access to investment opportunities.</p>
+            
+            <form id="mc-embedded-subscribe-form">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" name="FNAME" id="mce-FNAME" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="EMAIL" id="mce-EMAIL" required>
+                </div>
+                <div class="form-group">
+                    <label>Interest Level</label>
+                    <select name="INTEREST" id="mce-INTEREST">
+                        <option value="Updates">Just Updates</option>
+                        <option value="1k-5k">$1,000 - $5,000</option>
+                        <option value="5k-20k">$5,000 - $20,000</option>
+                        <option value="20k+">$20,000+ (Producer)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Get Updates →</button>
+            </form>
+            <div id="formResponse"></div>
+        </div>
+    </section>
 
-            <div class="funding-meter">
-                <div class="funding-amount">
-                    <h3>$2000 of $195,000 RAISED</h3>
-                    <p>1% Funded</p>
-                </div>
+    <section class="tiers" id="tiers">
+        <div class="container">
+            <div class="section-header"><h2>Be Part of History</h2></div>
+            <div class="tier-cards">
+                <div class="tier-card">
+                    <h3>BELIEVER</h3>
+                    <p style="font-size: 1.5rem; color: var(--accent);">$1,000+</p>
+                    <ul class="tier-benefits"><li>✓ Revenue share</li><li>✓ End credits</li></ul>
+                </div>
+                <div class="tier-card featured">
+                    <h3>EXECUTIVE</h3>
+                    <p style="font-size: 1.5rem; color: var(--accent);">$20,000+</p>
+                    <ul class="tier-benefits"><li>✓ Opening Credits</li><li>✓ Studio Visit</li><li>✓ Revenue Share</li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="progress-bar">
-                    <div class="progress-fill">1%</div>
-                </div>
+    <footer>
+        <p>© 2026 THE VERSE PROJECT. All rights reserved.</p>
+    </footer>
 
-                <div class="milestones">
-                    <div class="milestone-group">
-                        <h4>What We've Achieved:</h4>
-                        <ul>
-                            <li>Original screenplay completed</li>
-                            <li>Character designs in development</li>
-                            <li>1 investor committed</li>
-                            <li>Production team assembling</li>
-                            <li>Investment structure (SPV) established</li>
-                        </ul>
-                    </div>
+    <script>
+        const form = document.getElementById('mc-embedded-subscribe-form');
+        const responseDiv = document.getElementById('formResponse');
 
-                    <div class="milestone-group next">
-                        <h4>What's Next:</h4>
-                        <ul>
-                            <li>Reach $195K by March 31, 2026</li>
-                            <li>Begin storyboarding (April 2026)</li>
-                            <li>Start voice recording (May 2026)</li>
-                            <li>Launch animation production (June 2026)</li>
-                        </ul>
-                    </div>
-                </div>
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-                <div class="urgency-banner">
-                    ⏰ Investment Period Closes: March 31, 2026 • Only 5 spots remaining at Executive Producer tier
-                </div>
-            </div>
-        </div>
-    </section>
+            // 1. Collect Data
+            const fname = document.getElementById('mce-FNAME').value;
+            const email = document.getElementById('mce-EMAIL').value;
+            const interest = document.getElementById('mce-INTEREST').value;
 
-   <section class="email-capture" id="email">
-    <div class="container">
-        <div class="section-header">
-            <h2 style="color: var(--dark);">Join the Inner Circle</h2>
-            <p style="color: var(--dark); opacity: 0.9;">Get exclusive behind-the-scenes updates, work-in-progress animation reels, and early access to investment opportunities before they go public.</p>
-        </div>
+            // 2. Prepare JSONP URL (The secret to fixing Vercel loading issues)
+            const url = "https://gmail.us14.list-manage.com/subscribe/post-json?u=475649f6927ace2359a3cfc50&id=11e7b20f6d" 
+                        + "&EMAIL=" + encodeURIComponent(email) 
+                        + "&FNAME=" + encodeURIComponent(fname) 
+                        + "&INTEREST=" + encodeURIComponent(interest) 
+                        + "&c=mailchimpCallback";
 
-        <form action="https://gmail.us14.list-manage.com/subscribe/post?u=475649f6927ace2359a3cfc50&id=11e7b20f6d" method="post" id="emailForm" class="email-form" target="_blank">
-            
-            <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="FNAME" required>
-            </div>
+            // 3. UI Feedback
+            responseDiv.style.display = "block";
+            responseDiv.style.background = "#eee";
+            responseDiv.innerHTML = "Processing...";
 
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="EMAIL" required>
-            </div>
+            // 4. Inject JSONP Script
+            const script = document.createElement('script');
+            script.src = url;
+            document.body.appendChild(script);
+        });
 
-            <div class="form-group">
-                <label for="interest">I'm interested in investing at: (Optional)</label>
-                <select id="interest" name="INTEREST">
-                    <option value="">Just Updates</option>
-                    <option value="1k-2.5k">$1K - $2.5K (Believer Patron)</option>
-                    <option value="2.5k-5k">$2.5K - $5K (Community Supporter)</option>
-                    <option value="5k-10k">$5K - $10K (Supporting Investor)</option>
-                    <option value="10k-20k">$10K - $20K (Associate Producer)</option>
-                    <option value="20k+">$20K+ (Executive Producer)</option>
-                </select>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Get Exclusive Updates →</button>
-
-            <p class="privacy-note">
-                🔒 We respect your inbox. Updates sent monthly. Unsubscribe anytime. No spam, ever.
-            </p>
-        </form>
-    </div>
-    </section>
-
-    <!-- Investment Tiers -->
-    <section class="tiers" id="tiers">
-        <div class="container">
-            <div class="section-header">
-                <h2>Be Part of Something Groundbreaking</h2>
-                <p>This isn't a donation. This is an investment in the future of faith storytelling—with revenue share, producer credits, and creative input on what comes next.</p>
-            </div>
-
-            <div class="value-props">
-                <div class="value-prop">
-                    <div class="value-prop-icon">💵</div>
-                    <h3>Revenue Participation</h3>
-                    <p>Proportional returns on festivals, streaming, licensing, merchandise, and international distribution.</p>
-                </div>
-
-                <div class="value-prop">
-                    <div class="value-prop-icon">🎬</div>
-                    <h3>Producer Credits</h3>
-                    <p>Your name in the credits of a film positioned for Sundance, Annecy, and global streaming platforms.</p>
-                </div>
-
-                <div class="value-prop">
-                    <div class="value-prop-icon">🎯</div>
-                    <h3>Creative Voice</h3>
-                    <p>First-look rights on future VERSE anthology installments. Help decide what stories we tell next.</p>
-                </div>
-
-                <div class="value-prop">
-                    <div class="value-prop-icon">📈</div>
-                    <h3>ROI Potential</h3>
-                    <p>Conservative projections: 40-135% returns over 2-3 years. Upside: Series pickup and feature adaptation.</p>
-                </div>
-            </div>
-
-            <div class="tier-cards">
-                <div class="tier-card">
-                    <div class="tier-emoji">💛</div>
-                    <div class="tier-name">BELIEVER PATRON</div>
-                    <div class="tier-price">$1,000 - $2,499</div>
-                    <ul class="tier-benefits">
-                        <li>Revenue share</li>
-                        <li>End credits</li>
-                        <li>Digital screener</li>
-                        <li>Virtual premiere</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary" style="width: 100%;">Invest $1,000+ →</a>
-                </div>
-
-                <div class="tier-card">
-                    <div class="tier-emoji">💚</div>
-                    <div class="tier-name">COMMUNITY SUPPORTER</div>
-                    <div class="tier-price">$2,500 - $4,999</div>
-                    <ul class="tier-benefits">
-                        <li>All Believer Patron benefits</li>
-                        <li>Premiere invitation</li>
-                        <li>Quarterly updates</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary" style="width: 100%;">Invest $2,500+ →</a>
-                </div>
-
-                <div class="tier-card">
-                    <div class="tier-emoji">💙</div>
-                    <div class="tier-name">SUPPORTING INVESTOR</div>
-                    <div class="tier-price">$5,000 - $9,999</div>
-                    <ul class="tier-benefits">
-                        <li>All Community benefits</li>
-                        <li>Early screener (2 weeks)</li>
-                        <li>Behind-the-scenes portal</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary" style="width: 100%;">Invest $5,000+ →</a>
-                </div>
-
-                <div class="tier-card">
-                    <div class="tier-emoji">💜</div>
-                    <div class="tier-name">ASSOCIATE PRODUCER</div>
-                    <div class="tier-price">$10,000 - $19,999</div>
-                    <ul class="tier-benefits">
-                        <li>All Supporting benefits</li>
-                        <li>IMDb producer credit</li>
-                        <li>WIP animation reels</li>
-                        <li>Priority premiere seating</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary" style="width: 100%;">Invest $10,000+ →</a>
-                </div>
-
-                <div class="tier-card featured">
-                    <div class="tier-emoji">🧡</div>
-                    <div class="tier-name">EXECUTIVE PRODUCER</div>
-                    <div class="tier-price">$20,000+</div>
-                    <ul class="tier-benefits">
-                        <li>All Associate benefits</li>
-                        <li>Opening credits placement</li>
-                        <li>First-look rights on sequels</li>
-                        <li>Studio visit access</li>
-                        <li>VIP premiere + after-party</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary" style="width: 100%;">Invest $20,000+ →</a>
-                </div>
-            </div>
-
-            <div class="big-cta">
-                <h3>Ready to Make History?</h3>
-                <a href="#contact" class="btn btn-primary">🎬 Support The Project - Invest Now →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Story Section -->
-    <section class="why" id="story">
-        <div class="container">
-            <div class="section-header">
-                <h2>The Story That Started It All</h2>
-            </div>
-
-            <div style="max-width: 800px; margin: 0 auto;">
-                <p style="font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.8;">
-                    <strong>A cynical 17-year-old British-Nigerian podcaster posts an ad inviting Jesus to an interview.</strong> When Jesus actually shows up in a leather jacket, Ebun is yanked through time and space—from war-torn Syria to the South African veldt to an otherworldly shearing barn—where he's forced to confront the spiritual captivity he didn't know he was in.
-                </p>
-
-                <div class="why-grid">
-                    <div class="why-card">
-                        <h3>🎙️ Manchester</h3>
-                        <p>A podcast studio where cynicism meets the divine</p>
-                    </div>
-                    <div class="why
+        // 5. Global Callback Function
+        window.mailchimpCallback = function(data) {
+            if (data.result === "success") {
+                responseDiv.style.background = "#d4edda";
+                responseDiv.style.color = "#155724";
+                responseDiv.innerHTML = "Thank you! Check your email to confirm.";
+                form.reset();
+            } else {
+                responseDiv.style.background = "#f8d7da";
+                responseDiv.style.color = "#721c24";
+                responseDiv.innerHTML = data.msg;
+            }
+        };
+    </script>
+</body>
+</html>
