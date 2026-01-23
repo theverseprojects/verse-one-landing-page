@@ -6,13 +6,7 @@
     <title>VERSE ONE: The Shearer's Gospel - Faith Animation Investment</title>
     <meta name="description" content="Invest in VERSE ONE, a groundbreaking 13-minute animated faith film. $195K raise, investment starts at $1,000. Revenue share + producer credits.">
     
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="VERSE ONE: The Shearer's Gospel">
-    <meta property="og:description" content="When Jesus actually shows up to a podcast interview. A 13-minute animated short redefining faith storytelling.">
-    <meta property="og:type" content="website">
-    
     <style>
-        /* ADDED THIS FOR SMOOTH SCROLLING */
         html {
             scroll-behavior: smooth;
         }
@@ -130,7 +124,6 @@
             color: var(--dark);
         }
 
-        /* Section Styles */
         section {
             padding: 5rem 2rem;
         }
@@ -156,6 +149,73 @@
             color: #666;
             max-width: 700px;
             margin: 0 auto;
+        }
+
+        /* Story Section with Illustrations */
+        .story-section {
+            background: var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-visual-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            padding: 4rem 2rem;
+        }
+
+        .story-illustrations {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .illustration-item {
+            flex: 1;
+            text-align: center;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .illustration-item:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .illustration-item:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .illustration-item svg {
+            max-width: 200px;
+            height: auto;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
+        }
+
+        .illustration-label {
+            margin-top: 1rem;
+            font-weight: 600;
+            color: var(--secondary);
+            font-size: 1.1rem;
+        }
+
+        .story-content-box {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         /* Why Section */
@@ -212,7 +272,6 @@
             color: var(--primary);
         }
 
-        /* Progress Section */
         .progress-section {
             background: var(--white);
         }
@@ -220,7 +279,7 @@
         .funding-meter {
             background: var(--light);
             padding: 3rem;
-            border-radius: 1px;
+            border-radius: 12px;
             margin: 2rem 0;
         }
 
@@ -307,7 +366,6 @@
             font-size: 1.1rem;
         }
 
-        /* Email Capture */
         .email-capture {
             background: linear-gradient(135deg, var(--primary), #E5B685);
             color: var(--dark);
@@ -356,7 +414,6 @@
             margin-top: 1rem;
         }
 
-        /* Investment Tiers */
         .tiers {
             background: var(--light);
         }
@@ -485,59 +542,6 @@
             padding: 1.5rem 3rem;
         }
 
-        /* FAQ */
-        .faq {
-            background: var(--white);
-        }
-
-        .faq-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: var(--light);
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .faq-question {
-            padding: 1.5rem;
-            cursor: pointer;
-            font-weight: 600;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.3s ease;
-        }
-
-        .faq-question:hover {
-            background: #E8E3D8;
-        }
-
-        .faq-answer {
-            padding: 0 1.5rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-item.active .faq-answer {
-            padding: 1.5rem;
-            max-height: 500px;
-        }
-
-        .faq-toggle {
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-item.active .faq-toggle {
-            transform: rotate(180deg);
-        }
-
-        /* Footer */
         footer {
             background: var(--dark);
             color: var(--white);
@@ -550,67 +554,21 @@
             margin: 0 auto;
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .footer-links a {
-            color: var(--primary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: #E5B685;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .social-links a {
-            color: var(--white);
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: var(--primary);
-        }
-
-        /* Sticky CTA Mobile */
-        .sticky-cta {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--primary);
-            padding: 1rem;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
-            z-index: 1000;
-        }
-
-        .sticky-cta .btn {
-            width: 100%;
-            margin: 0;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
             section {
                 padding: 3rem 1.5rem;
             }
 
-            .sticky-cta {
-                display: block;
+            .story-illustrations {
+                flex-direction: column;
+            }
+
+            .illustration-item svg {
+                max-width: 150px;
+            }
+
+            .story-content-box {
+                padding: 2rem 1.5rem;
             }
 
             .tier-cards {
@@ -620,13 +578,8 @@
             .why-grid {
                 grid-template-columns: 1fr;
             }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
         }
 
-        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -889,14 +842,109 @@
         </div>
     </section>
 
-<!-- Story Section -->
-<section class="why" id="story">
-    <div class="container">
+<!-- Story Section with SVG Illustrations -->
+<section class="story-section" id="story">
+    <div class="story-visual-container">
         <div class="section-header">
             <h2>The Story That Started It All</h2>
         </div>
 
-        <div style="max-width: 800px; margin: 0 auto;">
+        <div class="story-illustrations">
+            <!-- Sheep Illustration -->
+            <div class="illustration-item">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Sheep Body -->
+                    <ellipse cx="100" cy="120" rx="60" ry="45" fill="#F5F5F5" stroke="#282861" stroke-width="3"/>
+                    
+                    <!-- Wool texture circles -->
+                    <circle cx="70" cy="110" r="12" fill="#FFFFFF" opacity="0.8"/>
+                    <circle cx="100" cy="105" r="15" fill="#FFFFFF" opacity="0.8"/>
+                    <circle cx="130" cy="110" r="12" fill="#FFFFFF" opacity="0.8"/>
+                    <circle cx="85" cy="130" r="10" fill="#FFFFFF" opacity="0.8"/>
+                    <circle cx="115" cy="130" r="10" fill="#FFFFFF" opacity="0.8"/>
+                    
+                    <!-- Head -->
+                    <ellipse cx="70" cy="90" rx="22" ry="25" fill="#F5F5F5" stroke="#282861" stroke-width="3"/>
+                    <circle cx="65" cy="85" r="3" fill="#282861"/>
+                    <circle cx="75" cy="85" r="3" fill="#282861"/>
+                    
+                    <!-- Ears -->
+                    <ellipse cx="58" cy="80" rx="8" ry="12" fill="#E8E8E8" stroke="#282861" stroke-width="2"/>
+                    <ellipse cx="82" cy="80" rx="8" ry="12" fill="#E8E8E8" stroke="#282861" stroke-width="2"/>
+                    
+                    <!-- Legs -->
+                    <rect x="75" y="155" width="8" height="30" fill="#2C2C2C" rx="4"/>
+                    <rect x="95" y="155" width="8" height="30" fill="#2C2C2C" rx="4"/>
+                    <rect x="115" y="155" width="8" height="30" fill="#2C2C2C" rx="4"/>
+                </svg>
+                <div class="illustration-label">The Lost Sheep</div>
+            </div>
+
+            <!-- Shearer's Cutter -->
+            <div class="illustration-item">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Handle -->
+                    <rect x="60" y="80" width="15" height="80" fill="#8B4513" stroke="#282861" stroke-width="2" rx="7"/>
+                    <rect x="125" y="80" width="15" height="80" fill="#8B4513" stroke="#282861" stroke-width="2" rx="7"/>
+                    
+                    <!-- Metal grips -->
+                    <line x1="67.5" y1="90" x2="67.5" y2="150" stroke="#282861" stroke-width="2"/>
+                    <line x1="132.5" y1="90" x2="132.5" y2="150" stroke="#282861" stroke-width="2"/>
+                    
+                    <!-- Scissor blades -->
+                    <path d="M 75 60 L 100 100 L 85 110 L 60 70 Z" fill="#C0C0C0" stroke="#282861" stroke-width="3"/>
+                    <path d="M 125 60 L 100 100 L 115 110 L 140 70 Z" fill="#C0C0C0" stroke="#282861" stroke-width="3"/>
+                    
+                    <!-- Blade edges (sharper look) -->
+                    <path d="M 75 60 L 100 100 L 85 110" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+                    <path d="M 125 60 L 100 100 L 115 110" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+                    
+                    <!-- Pivot point -->
+                    <circle cx="100" cy="100" r="8" fill="#8B4513" stroke="#282861" stroke-width="2"/>
+                    <circle cx="100" cy="100" r="4" fill="#C0C0C0"/>
+                    
+                    <!-- Decorative details -->
+                    <circle cx="67.5" cy="110" r="3" fill="#282861"/>
+                    <circle cx="132.5" cy="110" r="3" fill="#282861"/>
+                </svg>
+                <div class="illustration-label">The Shearer's Tool</div>
+            </div>
+
+            <!-- Leather Jacket/Robe -->
+            <div class="illustration-item">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Robe/Jacket body -->
+                    <path d="M 100 60 L 140 80 L 145 160 L 100 180 L 55 160 L 60 80 Z" 
+                          fill="#5D4E37" stroke="#282861" stroke-width="3"/>
+                    
+                    <!-- Collar -->
+                    <path d="M 85 60 L 100 55 L 115 60 L 115 75 L 100 80 L 85 75 Z" 
+                          fill="#6B5D4F" stroke="#282861" stroke-width="2"/>
+                    
+                    <!-- Left sleeve -->
+                    <path d="M 60 80 L 40 90 L 35 130 L 45 135 L 60 110 Z" 
+                          fill="#5D4E37" stroke="#282861" stroke-width="3"/>
+                    
+                    <!-- Right sleeve -->
+                    <path d="M 140 80 L 160 90 L 165 130 L 155 135 L 140 110 Z" 
+                          fill="#5D4E37" stroke="#282861" stroke-width="3"/>
+                    
+                    <!-- Center seam -->
+                    <line x1="100" y1="80" x2="100" y2="180" stroke="#282861" stroke-width="2"/>
+                    
+                    <!-- Leather texture highlights -->
+                    <path d="M 75 100 Q 100 105 125 100" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
+                    <path d="M 75 120 Q 100 125 125 120" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
+                    <path d="M 75 140 Q 100 145 125 140" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
+                    
+                    <!-- Belt/sash -->
+                    <ellipse cx="100" cy="130" rx="45" ry="8" fill="#EFBF04" stroke="#282861" stroke-width="2"/>
+                </svg>
+                <div class="illustration-label">The Shepherd's Garment</div>
+            </div>
+        </div>
+
+        <div class="story-content-box">
             <p style="font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.8;">
                 <strong>A cynical 17-year-old British-Nigerian podcaster posts an ad inviting Jesus to an interview.</strong>
                 When Jesus actually shows up in a leather jacket, Ebun is yanked through time and space—from war-torn Syria
@@ -904,7 +952,6 @@
                 captivity he didn't know he was in.
             </p>
 
-            <!-- Scripture-inspired pull quote -->
             <p style="
                 text-align: center;
                 font-style: italic;
@@ -912,7 +959,7 @@
                 color: #555;
                 margin-top: 2.5rem;
             ">
-                “All authority in heaven and on earth has been given to Me — therefore, go.”
+                "All authority in heaven and on earth has been given to Me — therefore, go."
                 <br>
                 <span style="font-size: 0.9rem; opacity: 0.7;">— Matthew 28:18–20</span>
             </p>
