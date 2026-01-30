@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VERSE ONE: The Shearer's Gospel - Faith Animation Investment</title>
-    <meta name="description" content="Invest in VERSE ONE, a groundbreaking 13-minute animated faith film. $195K raise, investment starts at $1,000. Revenue share + producer credits.">
+    <title>VERSE ONE: The Shearer’s Gospel — One Verse in God’s Story</title>
+    <meta name="description" content="Support VERSE ONE, a 13-minute animated faith film—one verse in a larger story God is telling through culture. Join the story, one verse at a time.">
     
     <style>
         html {
@@ -38,7 +38,6 @@
             line-height: 1.2;
         }
 
-        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
             color: var(--white);
@@ -151,7 +150,40 @@
             margin: 0 auto;
         }
 
-        /* Story Section with Illustrations */
+        .great-commission {
+            background: linear-gradient(135deg, var(--secondary), #1a1a4d);
+            color: var(--white);
+            padding: 5rem 2rem;
+        }
+
+        .commission-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .commission-verse {
+            font-size: 1.8rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            color: var(--primary);
+        }
+
+        .commission-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .commission-highlight {
+            background: rgba(239, 191, 4, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
         .story-section {
             background: var(--light);
             position: relative;
@@ -218,9 +250,8 @@
             }
         }
 
-        /* Why Section */
         .why {
-            background: var(--light);
+            background: var(--white);
         }
 
         .why-grid {
@@ -231,7 +262,7 @@
         }
 
         .why-card {
-            background: var(--white);
+            background: var(--light);
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
@@ -270,6 +301,77 @@
             font-style: normal;
             font-weight: 600;
             color: var(--primary);
+        }
+
+        .returns-section {
+            background: var(--light);
+            padding: 5rem 2rem;
+        }
+
+        .returns-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+
+        .return-stream {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .return-stream h4 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .return-stream p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .return-stream ul {
+            list-style: none;
+        }
+
+        .return-stream li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .return-stream li::before {
+            content: '💰';
+            position: absolute;
+            left: 0;
+        }
+
+        .disclaimer-box {
+            background: #FFF3CD;
+            border: 3px solid #FFC107;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem auto;
+            max-width: 900px;
+        }
+
+        .disclaimer-box h3 {
+            color: #856404;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .disclaimer-box p {
+            color: #856404;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
         }
 
         .progress-section {
@@ -366,16 +468,16 @@
             font-size: 1.1rem;
         }
 
-        .email-capture {
+        .interest-capture {
             background: linear-gradient(135deg, var(--primary), #E5B685);
             color: var(--dark);
         }
 
-        .email-form {
-            max-width: 600px;
+        .interest-form {
+            max-width: 700px;
             margin: 2rem auto;
             background: var(--white);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 12px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
         }
@@ -391,7 +493,8 @@
         }
 
         .form-group input,
-        .form-group select {
+        .form-group select,
+        .form-group textarea {
             width: 100%;
             padding: 1rem;
             border: 2px solid #E0E0E0;
@@ -401,10 +504,23 @@
             transition: border-color 0.3s ease;
         }
 
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
         .form-group input:focus,
-        .form-group select:focus {
+        .form-group select:focus,
+        .form-group textarea:focus {
             outline: none;
             border-color: var(--primary);
+        }
+
+        .form-note {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 0.5rem;
         }
 
         .privacy-note {
@@ -414,144 +530,21 @@
             margin-top: 1rem;
         }
 
-        .tiers {
-            background: var(--light);
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
         }
 
-        .value-props {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
         }
 
-        .value-prop {
-            text-align: center;
-            padding: 2rem;
-            background: var(--white);
-            border-radius: 12px;
-        }
-
-        .value-prop-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .value-prop h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--secondary);
-        }
-
-        .tier-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .tier-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 3px solid transparent;
-        }
-
-        .tier-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 10px 40px rgba(212,165,116,0.2);
-        }
-
-        .tier-card.featured {
-            border-color: var(--primary);
-            position: relative;
-        }
-
-        .tier-card.featured::before {
-            content: '⭐ MOST POPULAR';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary);
-            color: var(--dark);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-        }
-
-        .tier-emoji {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .tier-name {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 0.5rem;
-        }
-
-        .tier-price {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-
-        .tier-benefits {
-            list-style: none;
-            margin: 1.5rem 0;
-            text-align: left;
-        }
-
-        .tier-benefits li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .tier-benefits li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: bold;
-        }
-
-        .big-cta {
-            text-align: center;
-            margin: 4rem 0;
-            padding: 3rem;
-            background: linear-gradient(135deg, var(--secondary), var(--primary));
-            border-radius: 12px;
-        }
-
-        .big-cta h3 {
-            color: var(--white);
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .big-cta .btn {
-            font-size: 1.3rem;
-            padding: 1.5rem 3rem;
-        }
-
-        footer {
-            background: var(--dark);
-            color: var(--white);
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-weight: normal;
         }
 
         @media (max-width: 768px) {
@@ -571,7 +564,7 @@
                 padding: 2rem 1.5rem;
             }
 
-            .tier-cards {
+            .returns-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -602,10 +595,115 @@
         <div class="hero-content fade-in">
             <h1>VERSE ONE: The Shearer's Gospel</h1>
             <p class="tagline">When Jesus Actually Shows Up</p>
-            <p class="subtitle">A 13-minute animated short redefining faith storytelling<br>
-            Raising $195,000 • Investment starts at $1,000</p>
-            <a href="#tiers" class="btn btn-primary">View Investment Tiers</a>
+            <p class="subtitle">A 13-minute animated short redefining faith storytelling <br>Raising $195,000 •
+            Investment starts at $1,000</p>
+            <a href="#interest" class="btn btn-primary">Express Interest</a>
             <a href="#story" class="btn btn-secondary" style="margin-left: 1rem;">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Great Commission Section -->
+    <section class="great-commission">
+        <div class="commission-content">
+            <p class="commission-verse">
+                "All authority in heaven and on earth has been given to me. Therefore go and make disciples of all nations..."
+            </p>
+            <p style="text-align: right; font-style: italic; color: var(--primary); margin-bottom: 3rem;">— Matthew 28:18-19</p>
+            
+            <p class="commission-text">
+                VERSE ONE exists to fulfill this calling through the power of story. We're creating animation that crosses borders, languages, and generations—meeting people where they are with the Gospel presented in ways they've never experienced before.
+            </p>
+
+            <div class="commission-highlight">
+                <h3 style="color: var(--primary); margin-bottom: 1rem;">Why Animation? Why Now?</h3>
+                <p>Animation transcends cultural barriers. It speaks Aramaic in Syria, English in Manchester, Igbo in Nigeria—all in 13 minutes. While traditional missions face borders and restrictions, digital storytelling goes everywhere the internet reaches.</p>
+                <p style="margin-top: 1rem;"><strong>This is 21st-century missions work.</strong> Your support doesn't just fund a film—it funds the Great Commission in action.</p>
+            </div>
+
+            <p class="commission-text" style="font-size: 1.3rem; font-weight: 600;">
+                <strong>The greatest return?</strong> Souls reached. Hearts changed. The Gospel covering the whole earth as the waters cover the sea.
+            </p>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section" id="story">
+        <div class="story-visual-container">
+            <div class="section-header">
+                <h2>The Story That Started It All</h2>
+            </div>
+
+            <div class="story-illustrations">
+                <div class="illustration-item">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="100" cy="120" rx="60" ry="45" fill="#F5F5F5" stroke="#282861" stroke-width="3"/>
+                        <circle cx="70" cy="110" r="12" fill="#FFFFFF" opacity="0.8"/>
+                        <circle cx="100" cy="105" r="15" fill="#FFFFFF" opacity="0.8"/>
+                        <circle cx="130" cy="110" r="12" fill="#FFFFFF" opacity="0.8"/>
+                        <circle cx="85" cy="130" r="10" fill="#FFFFFF" opacity="0.8"/>
+                        <circle cx="115" cy="130" r="10" fill="#FFFFFF" opacity="0.8"/>
+                        <ellipse cx="70" cy="90" rx="22" ry="25" fill="#F5F5F5" stroke="#282861" stroke-width="3"/>
+                        <circle cx="65" cy="85" r="3" fill="#282861"/>
+                        <circle cx="75" cy="85" r="3" fill="#282861"/>
+                        <ellipse cx="58" cy="80" rx="8" ry="12" fill="#E8E8E8" stroke="#282861" stroke-width="2"/>
+                        <ellipse cx="82" cy="80" rx="8" ry="12" fill="#E8E8E8" stroke="#282861" stroke-width="2"/>
+                        <rect x="75" y="155" width="8" height="30" fill="#2C2C2C" rx="4"/>
+                        <rect x="95" y="155" width="8" height="30" fill="#2C2C2C" rx="4"/>
+                        <rect x="115" y="155" width="8" height="30" fill="#2C2C2C" rx="4"/>
+                    </svg>
+                    <div class="illustration-label">The Lost Sheep</div>
+                </div>
+
+                <div class="illustration-item">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="60" y="80" width="15" height="80" fill="#8B4513" stroke="#282861" stroke-width="2" rx="7"/>
+                        <rect x="125" y="80" width="15" height="80" fill="#8B4513" stroke="#282861" stroke-width="2" rx="7"/>
+                        <line x1="67.5" y1="90" x2="67.5" y2="150" stroke="#282861" stroke-width="2"/>
+                        <line x1="132.5" y1="90" x2="132.5" y2="150" stroke="#282861" stroke-width="2"/>
+                        <path d="M 75 60 L 100 100 L 85 110 L 60 70 Z" fill="#C0C0C0" stroke="#282861" stroke-width="3"/>
+                        <path d="M 125 60 L 100 100 L 115 110 L 140 70 Z" fill="#C0C0C0" stroke="#282861" stroke-width="3"/>
+                        <path d="M 75 60 L 100 100 L 85 110" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+                        <path d="M 125 60 L 100 100 L 115 110" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+                        <circle cx="100" cy="100" r="8" fill="#8B4513" stroke="#282861" stroke-width="2"/>
+                        <circle cx="100" cy="100" r="4" fill="#C0C0C0"/>
+                        <circle cx="67.5" cy="110" r="3" fill="#282861"/>
+                        <circle cx="132.5" cy="110" r="3" fill="#282861"/>
+                    </svg>
+                    <div class="illustration-label">The Shearer's Tool</div>
+                </div>
+
+                <div class="illustration-item">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 100 60 L 140 80 L 145 160 L 100 180 L 55 160 L 60 80 Z" 
+                              fill="#5D4E37" stroke="#282861" stroke-width="3"/>
+                        <path d="M 85 60 L 100 55 L 115 60 L 115 75 L 100 80 L 85 75 Z" 
+                              fill="#6B5D4F" stroke="#282861" stroke-width="2"/>
+                        <path d="M 60 80 L 40 90 L 35 130 L 45 135 L 60 110 Z" 
+                              fill="#5D4E37" stroke="#282861" stroke-width="3"/>
+                        <path d="M 140 80 L 160 90 L 165 130 L 155 135 L 140 110 Z" 
+                              fill="#5D4E37" stroke="#282861" stroke-width="3"/>
+                        <line x1="100" y1="80" x2="100" y2="180" stroke="#282861" stroke-width="2"/>
+                        <path d="M 75 100 Q 100 105 125 100" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
+                        <path d="M 75 120 Q 100 125 125 120" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
+                        <path d="M 75 140 Q 100 145 125 140" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
+                        <ellipse cx="100" cy="130" rx="45" ry="8" fill="#EFBF04" stroke="#282861" stroke-width="2"/>
+                    </svg>
+                    <div class="illustration-label">The Shepherd's Garment</div>
+                </div>
+            </div>
+
+            <div class="story-content-box">
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.8;">
+                    <strong>A cynical 17-year-old British-Nigerian podcaster posts an ad inviting Jesus to an interview.</strong>
+                    When Jesus actually shows up in a leather jacket, Ebun is yanked through time and space—from war-torn Syria
+                    to the South African veldt to an otherworldly shearing barn—where he's forced to confront the spiritual
+                    captivity he didn't know he was in.
+                </p>
+
+                <p style="text-align: center; font-style: italic; font-size: 1.1rem; color: #555; margin-top: 2.5rem;">
+                    This is the Gospel—unfiltered, multicultural, and impossible to ignore.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -619,7 +717,7 @@
             <div class="why-grid">
                 <div class="why-card">
                     <div class="why-icon">🎭</div>
-                    <h3>Faith Cinema Is Breaking Grounds</h3>
+                    <h3>Faith Cinema Is Breaking Ground</h3>
                     <p>We are exploring new opportunities for Christian filmmaking to reach a new generation. With Angel, Sunrise, and Kingdom Story paving the way, imaginative Christian filmmakers like us are telling never-before-told stories about our faith.</p>
                 </div>
                 
@@ -639,6 +737,82 @@
             <div class="quote">
                 <p>"We are not just making a film; we are breaking ground to reach the unreached. We are capturing the heart of a new generation."</p>
                 <cite>— Oyakhire Russel, Creator</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Returns Section -->
+    <section class="returns-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>If This Project Generates Revenue</h2>
+                <p style="margin-top: 1rem;">Kingdom impact is the primary goal. But if the project generates revenue, here's how returns could come:</p>
+            </div>
+
+            <div class="returns-grid">
+                <div class="return-stream">
+                    <h4>Festival Prize Money</h4>
+                    <p>Major animation festivals award substantial cash prizes</p>
+                    <ul>
+                        <li>Sundance, Annecy, SXSW awards</li>
+                        <li>Faith film festival prizes</li>
+                        <li>International animation competitions</li>
+                    </ul>
+                </div>
+
+                <div class="return-stream">
+                    <h4>Streaming Licensing</h4>
+                    <p>Platforms pay licensing fees for quality content</p>
+                    <ul>
+                        <li>Angel Studios distribution</li>
+                        <li>Netflix, Amazon Prime, Hulu</li>
+                        <li>Faith-based streaming networks</li>
+                    </ul>
+                </div>
+
+                <div class="return-stream">
+                    <h4>International Distribution</h4>
+                    <p>Animation travels globally—foreign markets license heavily</p>
+                    <ul>
+                        <li>European broadcasters</li>
+                        <li>African networks</li>
+                        <li>Asian streaming platforms</li>
+                    </ul>
+                </div>
+
+                <div class="return-stream">
+                    <h4>Merchandise & IP Licensing</h4>
+                    <p>Characters, designs, and story elements can be licensed</p>
+                    <ul>
+                        <li>Book adaptations</li>
+                        <li>Merchandise rights</li>
+                        <li>Educational content licensing</li>
+                    </ul>
+                </div>
+
+                <div class="return-stream">
+                    <h4>Series Pickup</h4>
+                    <p>If VERSE ONE succeeds, we have 5-7 more "verses" planned</p>
+                    <ul>
+                        <li>Anthology series deals</li>
+                        <li>Feature film adaptation</li>
+                        <li>Expanded universe opportunities</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- DISCLAIMER BOX -->
+            <div class="disclaimer-box">
+                <h3>⚠️ IMPORTANT: This Is High-Risk</h3>
+                <p>
+                    <strong>There are NO GUARANTEES of financial return.</strong> Film production is inherently uncertain. Many faith films underperform or fail to recoup costs. Your <strong>primary motivation should be supporting the Great Commission</strong>, not profit expectations.
+                </p>
+                <p>
+                    <strong>Only invest what you can afford to lose.</strong> This is a high-risk opportunity. The biggest ROI is Kingdom impact—souls reached, hearts changed, the Gospel spreading globally.
+                </p>
+                <p style="font-size: 1rem; font-style: italic;">
+                    Conservative projections: Modest returns over 2-3 years. Best-case: Strong returns if series pickup or major platform deal occurs. Worst-case: No financial return but Gospel impact achieved.
+                </p>
             </div>
         </div>
     </section>
@@ -684,299 +858,203 @@
                 </div>
 
                 <div class="urgency-banner">
-                    ⏰ Investment Period Closes: April 31, 2026 • 5 spots remaining at Executive Producer tier
+                    ⏰ Investment Period Closes: April 30, 2026 • 5 spots remaining at Executive Producer tier
                 </div>
             </div>
         </div>
     </section>
 
-<!-- Email Capture -->
-<section class="email-capture" id="email">
-    <div class="container">
-        <div class="section-header">
-            <h2 style="color: var(--dark);">Join the Inner Circle</h2>
-            <p style="color: var(--dark); opacity: 0.9;">
-                Get exclusive behind-the-scenes updates, work-in-progress animation reels, and early access to investment opportunities before they go public.
-            </p>
-        </div>
-
-        <form class="email-form" id="emailForm" action="https://hook.eu1.make.com/2kvucufgna2yvs8dw3fspvmk6tta1nlb" method="POST">
-            <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="interest">I'm interested in investing at: (Optional)</label>
-                <select id="interest" name="interest">
-                    <option value="Just Updates">Just Updates</option>
-                    <option value="1k-2.5k">$1K - $2.5K (Believer Patron)</option>
-                    <option value="2.5k-5k">$2.5K - $5K (Community Supporter)</option>
-                    <option value="5k-10k">$5K - $10K (Supporting Investor)</option>
-                    <option value="10k-20k">$10K - $20K (Associate Producer)</option>
-                    <option value="20k+">$20K+ (Executive Producer)</option>
-                </select>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
-                Get Exclusive Updates →
-            </button>
-
-            <p class="privacy-note">
-                🔒 We respect your inbox. Updates sent monthly. Unsubscribe anytime. No spam, ever.
-            </p>
-        </form>
-    </div>
-</section>
-
-
-    <!-- Investment Tiers -->
-    <section class="tiers" id="tiers">
+    <!-- Interest Form Section -->
+    <section class="interest-capture" id="interest">
         <div class="container">
             <div class="section-header">
-                <h2>Be Part of Something Groundbreaking</h2>
-                <p>This isn't a donation. This is an investment in the future of faith storytelling—with revenue share, producer credits, and creative input on what comes next.</p>
+                <h2 style="color: var(--dark);">Express Your Interest (No Commitment Yet)</h2>
+                <p style="color: var(--dark); opacity: 0.9;">
+                    Tell us about your interest level. We'll follow up with full details, schedule a conversation, and answer all your questions before any commitment.
+                </p>
             </div>
 
-            <div class="value-props">
-                <div class="value-prop">
-                    <div class="value-prop-icon">💵</div>
-                    <h3>Revenue Participation</h3>
-                    <p>Proportional returns on festivals, streaming, licensing, merchandise, and international distribution.</p>
+            <form class="interest-form" id="interestForm" action="https://hook.eu1.make.com/2kvucufgna2yvs8dw3fspvmk6tta1nlb" method="POST">
+                <div class="form-group">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" id="firstName" name="firstName" required>
                 </div>
 
-                <div class="value-prop">
-                    <div class="value-prop-icon">🎬</div>
-                    <h3>Producer Credits</h3>
-                    <p>Your name in the credits of a film positioned for Sundance, Annecy, and global streaming platforms.</p>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
 
-                <div class="value-prop">
-                    <div class="value-prop-icon">🎯</div>
-                    <h3>Creative Voice</h3>
-                    <p>First-look rights on future VERSE anthology installments. Help decide what stories we tell next.</p>
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone">
+                    <p class="form-note">Helps us schedule a call faster</p>
                 </div>
 
-                <div class="value-prop">
-                    <div class="value-prop-icon">📈</div>
-                    <h3>ROI Potential</h3>
-                    <p>Conservative projections: 40-135% returns over 2-3 years. Upside: Series pickup and feature adaptation.</p>
+                <div class="form-group">
+                    <label for="interestLevel">I'm interested in supporting at: *</label>
+                    <select id="interestLevel" name="interestLevel" required>
+                        <option value="">Select an amount</option>
+                        <option value="Just Exploring">Just Exploring / Want More Info</option>
+                        <option value="1k-2.5k">$1,000 - $2,499 (Believer Patron)</option>
+                        <option value="2.5k-5k">$2,500 - $4,999 (Community Supporter)</option>
+                        <option value="5k-10k">$5,000 - $9,999 (Supporting Investor)</option>
+                        <option value="10k-20k">$10,000 - $19,999 (Associate Producer)</option>
+                        <option value="20k+">$20,000+ (Executive Producer)</option>
+                    </select>
                 </div>
+
+                <div class="form-group">
+                    <label for="comments">Questions or Comments (Optional)</label>
+                    <textarea id="comments" name="comments" placeholder="Any questions we should address when we connect?"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="acknowledgeRisk" name="acknowledgeRisk" required>
+                        <label for="acknowledgeRisk">
+                            I understand this is a high-risk opportunity with no guarantees of financial return. My primary motivation is supporting the Great Commission through storytelling. *
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    Submit Interest (No Payment Required) →
+                </button>
+
+                <p class="privacy-note">
+                    🔒 No payment required. We'll contact you to discuss next steps and answer all questions before any commitment.
+                </p>
+            </form>
+        </div>
+    </section>
+
+   <!-- Investment Tiers Section -->
+<section class="tiers" id="tiers" style="background: var(--light); padding: 5rem 2rem;">
+    <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+            <h2>Ready To Invest?</h2>
+            <p>If you’re ready, don’t wait. Make your pledge now and secure your place in bringing this story to life.</p>
+        </div>
+
+        <!-- Value Propositions -->
+        <div class="value-props" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+            <div class="value-prop" style="text-align: center; background: var(--white); padding: 2rem; border-radius: 12px;">
+                <div class="value-prop-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">💵</div>
+                <h3>Revenue Participation</h3>
+                <p>Proportional returns on festivals, streaming, licensing, merchandise, and international distribution.</p>
             </div>
 
-            <div class="tier-cards">
-                <div class="tier-card">
-                    <div class="tier-emoji">💛</div>
-                    <div class="tier-name">BELIEVER PATRON</div>
-                    <div class="tier-price">$1,000 - $2,499</div>
-                    <ul class="tier-benefits">
-                        <li>Revenue share</li>
-                        <li>End credits</li>
-                        <li>Digital screener</li>
-                        <li>Virtual premiere</li>
-                    </ul>
-                    <a href="https://believer-patron.vercel.app/" class="btn btn-primary" style="width: 100%;">Invest $1,000+ →</a>
-                </div>
-
-                <div class="tier-card">
-                    <div class="tier-emoji">💚</div>
-                    <div class="tier-name">COMMUNITY SUPPORTER</div>
-                    <div class="tier-price">$2,500 - $4,999</div>
-                    <ul class="tier-benefits">
-                        <li>All Believer Patron benefits</li>
-                        <li>Premiere invitation</li>
-                        <li>Quarterly updates</li>
-                    </ul>
-                    <a href="https://community-supporter.vercel.app/" class="btn btn-primary" style="width: 100%;">Invest $2,500+ →</a>
-                </div>
-
-                <div class="tier-card">
-                    <div class="tier-emoji">💙</div>
-                    <div class="tier-name">SUPPORTING INVESTOR</div>
-                    <div class="tier-price">$5,000 - $9,999</div>
-                    <ul class="tier-benefits">
-                        <li>All Community benefits</li>
-                        <li>Early screener (2 weeks)</li>
-                        <li>Behind-the-scenes portal</li>
-                    </ul>
-                    <a href="https://supporting-investor.vercel.app/" class="btn btn-primary" style="width: 100%;">Invest $5,000+ →</a>
-                </div>
-
-                <div class="tier-card">
-                    <div class="tier-emoji">💜</div>
-                    <div class="tier-name">ASSOCIATE PRODUCER</div>
-                    <div class="tier-price">$10,000 - $19,999</div>
-                    <ul class="tier-benefits">
-                        <li>All Supporting benefits</li>
-                        <li>IMDb producer credit</li>
-                        <li>WIP animation reels</li>
-                        <li>Priority premiere seating</li>
-                    </ul>
-                    <a href="https://associate-producer.vercel.app/" class="btn btn-primary" style="width: 100%;">Invest $10,000+ →</a>
-                </div>
-
-                <div class="tier-card featured">
-                    <div class="tier-emoji">🧡</div>
-                    <div class="tier-name">EXECUTIVE PRODUCER</div>
-                    <div class="tier-price">$20,000+</div>
-                    <ul class="tier-benefits">
-                        <li>All Associate benefits</li>
-                        <li>Opening credits placement</li>
-                        <li>First-look rights on sequels</li>
-                        <li>Studio visit access</li>
-                        <li>VIP premiere + after-party</li>
-                    </ul>
-                    <a href="https://executive-producer.vercel.app/" class="btn btn-primary" style="width: 100%;">Invest $20,000+ →</a>
-                </div>
+            <div class="value-prop" style="text-align: center; background: var(--white); padding: 2rem; border-radius: 12px;">
+                <div class="value-prop-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">🎬</div>
+                <h3>Producer Credits</h3>
+                <p>Your name in the credits of films positioned for Sundance, Annecy, and global streaming platforms.</p>
             </div>
 
-            <div class="big-cta">
-                <h3>Ready to Make History?</h3>
-                <a href="#email" class="btn btn-primary">🎬 Support The Project - Invest Now →</a>
+            <div class="value-prop" style="text-align: center; background: var(--white); padding: 2rem; border-radius: 12px;">
+                <div class="value-prop-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">🎯</div>
+                <h3>Creative Voice</h3>
+                <p>First-look rights on future VERSE anthology installments—help shape what stories we tell next.</p>
+            </div>
+
+            <div class="value-prop" style="text-align: center; background: var(--white); padding: 2rem; border-radius: 12px;">
+                <div class="value-prop-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">📈</div>
+                <h3>ROI Potential</h3>
+                <p>Conservative projections: 40–135% returns over 2–3 years. Upside: Series pickup and feature adaptation.</p>
+            </div>
+        </div>
+
+        <!-- Tier Cards -->
+        <div class="tier-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+            
+            <!-- BELIEVER PATRON -->
+            <div class="tier-card" style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div class="tier-emoji" style="font-size: 2rem; margin-bottom: 0.5rem;">💛</div>
+                <div class="tier-name" style="font-size: 1.3rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.5rem;">BELIEVER PATRON</div>
+                <div class="tier-price" style="font-size: 1.8rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem;">$1,000 - $2,499</div>
+                <ul class="tier-benefits" style="list-style: none; padding-left: 0; margin: 1.5rem 0;">
+                    <li>Revenue share</li>
+                    <li>End credits</li>
+                    <li>Digital screener</li>
+                    <li>Virtual premiere</li>
+                </ul>
+                <a href="https://believer-patron.vercel.app/" class="btn btn-primary" style="width: 100%;">Invest $1,000+ →</a>
+            </div>
+
+            <!-- COMMUNITY SUPPORTER -->
+            <div class="tier-card" style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div class="tier-emoji" style="font-size: 2rem; margin-bottom: 0.5rem;">💚</div>
+                <div class="tier-name" style="font-size: 1.3rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.5rem;">COMMUNITY SUPPORTER</div>
+                <div class="tier-price" style="font-size: 1.8rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem;">$2,500 - $4,999</div>
+                <ul class="tier-benefits" style="list-style: none; padding-left: 0; margin: 1.5rem 0;">
+                    <li>All Believer Patron benefits</li>
+                    <li>Premiere invitation</li>
+                    <li>Quarterly updates</li>
+                </ul>
+                <a href="https://community-supporter.vercel.app/" class="btn btn-primary" style="width: 100%;">Invest $2,500+ →</a>
+            </div>
+
+            <!-- SUPPORTING INVESTOR -->
+            <div class="tier-card" style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div class="tier-emoji" style="font-size: 2rem; margin-bottom: 0.5rem;">💙</div>
+                <div class="tier-name" style="font-size: 1.3rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.5rem;">SUPPORTING INVESTOR</div>
+                <div class="tier-price" style="font-size: 1.8rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem;">$5,000 - $9,999</div>
+                <ul class="tier-benefits" style="list-style: none; padding-left: 0; margin: 1.5rem 0;">
+                    <li>All Community benefits</li>
+                    <li>Early screener (2 weeks)</li>
+                    <li>Behind-the-scenes portal</li>
+                </ul>
+                <a href="https://supporting-investor.vercel.app/" class="btn btn-primary" style="width: 100%;">Invest $5,000+ →</a>
+            </div>
+
+            <!-- ASSOCIATE PRODUCER -->
+            <div class="tier-card" style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div class="tier-emoji" style="font-size: 2rem; margin-bottom: 0.5rem;">💜</div>
+                <div class="tier-name" style="font-size: 1.3rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.5rem;">ASSOCIATE PRODUCER</div>
+                <div class="tier-price" style="font-size: 1.8rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem;">$10,000 - $19,999</div>
+                <ul class="tier-benefits" style="list-style: none; padding-left: 0; margin: 1.5rem 0;">
+                    <li>All Supporting benefits</li>
+                    <li>IMDb producer credit</li>
+                    <li>WIP animation reels</li>
+                    <li>Priority premiere seating</li>
+                </ul>
+                <a href="https://associate-producer.vercel.app/" class="btn btn-primary" style="width: 100%;">Invest $10,000+ →</a>
+            </div>
+
+            <!-- EXECUTIVE PRODUCER (Featured) -->
+            <div class="tier-card featured" style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 3px solid var(--primary); position: relative;">
+                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: var(--dark); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">⭐ MOST IMPACTFUL</div>
+                <div class="tier-emoji" style="font-size: 2rem; margin-bottom: 0.5rem;">🧡</div>
+                <div class="tier-name" style="font-size: 1.3rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.5rem;">EXECUTIVE PRODUCER</div>
+                <div class="tier-price" style="font-size: 1.8rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem;">$20,000+</div>
+                <ul class="tier-benefits" style="list-style: none; padding-left: 0; margin: 1.5rem 0;">
+                    <li>All Associate benefits</li>
+                    <li>Opening credits placement</li>
+                    <li>First-look rights on sequels</li>
+                    <li>Studio visit access</li>
+                    <li>VIP premiere + after-party</li>
+                </ul>
+                <a href="https://executive-producer.vercel.app/" class="btn btn-primary" style="width: 100%;">Invest $20,000+ →</a>
+            </div>
+    </div>
+
+            <div style="text-align: center; margin: 4rem 0; padding: 3rem; background: linear-gradient(135deg, var(--secondary), var(--primary)); border-radius: 12px;">
+                <h3 style="color: var(--white); font-size: 2.5rem; margin-bottom: 2rem;">Claim Your Producer Role</h3>
+                <a href="#interest" class="btn btn-primary" style="font-size: 1.3rem; padding: 1.5rem 3rem;">Express Interest Now →</a>
             </div>
         </div>
     </section>
 
-<!-- Story Section with SVG Illustrations -->
-<section class="story-section" id="story">
-    <div class="story-visual-container">
-        <div class="section-header">
-            <h2>The Story That Started It All</h2>
-        </div>
-
-        <div class="story-illustrations">
-            <!-- Sheep Illustration -->
-            <div class="illustration-item">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Sheep Body -->
-                    <ellipse cx="100" cy="120" rx="60" ry="45" fill="#F5F5F5" stroke="#282861" stroke-width="3"/>
-                    
-                    <!-- Wool texture circles -->
-                    <circle cx="70" cy="110" r="12" fill="#FFFFFF" opacity="0.8"/>
-                    <circle cx="100" cy="105" r="15" fill="#FFFFFF" opacity="0.8"/>
-                    <circle cx="130" cy="110" r="12" fill="#FFFFFF" opacity="0.8"/>
-                    <circle cx="85" cy="130" r="10" fill="#FFFFFF" opacity="0.8"/>
-                    <circle cx="115" cy="130" r="10" fill="#FFFFFF" opacity="0.8"/>
-                    
-                    <!-- Head -->
-                    <ellipse cx="70" cy="90" rx="22" ry="25" fill="#F5F5F5" stroke="#282861" stroke-width="3"/>
-                    <circle cx="65" cy="85" r="3" fill="#282861"/>
-                    <circle cx="75" cy="85" r="3" fill="#282861"/>
-                    
-                    <!-- Ears -->
-                    <ellipse cx="58" cy="80" rx="8" ry="12" fill="#E8E8E8" stroke="#282861" stroke-width="2"/>
-                    <ellipse cx="82" cy="80" rx="8" ry="12" fill="#E8E8E8" stroke="#282861" stroke-width="2"/>
-                    
-                    <!-- Legs -->
-                    <rect x="75" y="155" width="8" height="30" fill="#2C2C2C" rx="4"/>
-                    <rect x="95" y="155" width="8" height="30" fill="#2C2C2C" rx="4"/>
-                    <rect x="115" y="155" width="8" height="30" fill="#2C2C2C" rx="4"/>
-                </svg>
-                <div class="illustration-label">The Lost Sheep</div>
-            </div>
-
-            <!-- Shearer's Cutter -->
-            <div class="illustration-item">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Handle -->
-                    <rect x="60" y="80" width="15" height="80" fill="#8B4513" stroke="#282861" stroke-width="2" rx="7"/>
-                    <rect x="125" y="80" width="15" height="80" fill="#8B4513" stroke="#282861" stroke-width="2" rx="7"/>
-                    
-                    <!-- Metal grips -->
-                    <line x1="67.5" y1="90" x2="67.5" y2="150" stroke="#282861" stroke-width="2"/>
-                    <line x1="132.5" y1="90" x2="132.5" y2="150" stroke="#282861" stroke-width="2"/>
-                    
-                    <!-- Scissor blades -->
-                    <path d="M 75 60 L 100 100 L 85 110 L 60 70 Z" fill="#C0C0C0" stroke="#282861" stroke-width="3"/>
-                    <path d="M 125 60 L 100 100 L 115 110 L 140 70 Z" fill="#C0C0C0" stroke="#282861" stroke-width="3"/>
-                    
-                    <!-- Blade edges (sharper look) -->
-                    <path d="M 75 60 L 100 100 L 85 110" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
-                    <path d="M 125 60 L 100 100 L 115 110" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
-                    
-                    <!-- Pivot point -->
-                    <circle cx="100" cy="100" r="8" fill="#8B4513" stroke="#282861" stroke-width="2"/>
-                    <circle cx="100" cy="100" r="4" fill="#C0C0C0"/>
-                    
-                    <!-- Decorative details -->
-                    <circle cx="67.5" cy="110" r="3" fill="#282861"/>
-                    <circle cx="132.5" cy="110" r="3" fill="#282861"/>
-                </svg>
-                <div class="illustration-label">The Shearer's Tool</div>
-            </div>
-
-            <!-- Leather Jacket/Robe -->
-            <div class="illustration-item">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Robe/Jacket body -->
-                    <path d="M 100 60 L 140 80 L 145 160 L 100 180 L 55 160 L 60 80 Z" 
-                          fill="#5D4E37" stroke="#282861" stroke-width="3"/>
-                    
-                    <!-- Collar -->
-                    <path d="M 85 60 L 100 55 L 115 60 L 115 75 L 100 80 L 85 75 Z" 
-                          fill="#6B5D4F" stroke="#282861" stroke-width="2"/>
-                    
-                    <!-- Left sleeve -->
-                    <path d="M 60 80 L 40 90 L 35 130 L 45 135 L 60 110 Z" 
-                          fill="#5D4E37" stroke="#282861" stroke-width="3"/>
-                    
-                    <!-- Right sleeve -->
-                    <path d="M 140 80 L 160 90 L 165 130 L 155 135 L 140 110 Z" 
-                          fill="#5D4E37" stroke="#282861" stroke-width="3"/>
-                    
-                    <!-- Center seam -->
-                    <line x1="100" y1="80" x2="100" y2="180" stroke="#282861" stroke-width="2"/>
-                    
-                    <!-- Leather texture highlights -->
-                    <path d="M 75 100 Q 100 105 125 100" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
-                    <path d="M 75 120 Q 100 125 125 120" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
-                    <path d="M 75 140 Q 100 145 125 140" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
-                    
-                    <!-- Belt/sash -->
-                    <ellipse cx="100" cy="130" rx="45" ry="8" fill="#EFBF04" stroke="#282861" stroke-width="2"/>
-                </svg>
-                <div class="illustration-label">The Shepherd's Garment</div>
-            </div>
-        </div>
-
-        <div class="story-content-box">
-            <p style="font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.8;">
-                <strong>A cynical 17-year-old British-Nigerian podcaster posts an ad inviting Jesus to an interview.</strong>
-                When Jesus actually shows up in a leather jacket, Ebun is yanked through time and space—from war-torn Syria
-                to the South African veldt to an otherworldly shearing barn—where he's forced to confront the spiritual
-                captivity he didn't know he was in.
-            </p>
-
-            <p style="
-                text-align: center;
-                font-style: italic;
-                font-size: 1.1rem;
-                color: #555;
-                margin-top: 2.5rem;
-            ">
-                "All authority in heaven and on earth has been given to Me — therefore, go."
-                <br>
-                <span style="font-size: 0.9rem; opacity: 0.7;">— Matthew 28:18–20</span>
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer>
-        <div class="footer-content">
+    <!-- Footer -->
+    <footer style="background: var(--dark); color: var(--white); padding: 3rem 2rem; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto;">
             <h3>VERSE ONE: The Shearer's Gospel</h3>
-            <p>© 2026 The Verse Project.</p>
+            <p style="margin-top: 0.5rem;">© 2026 The Verse Project. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        document.getElementById('emailForm').addEventListener('submit', function(e) {
+        document.getElementById('interestForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             const form = this;
@@ -985,7 +1063,7 @@
 
             // Show loading state
             submitBtn.disabled = true;
-            submitBtn.innerHTML = "Sending...";
+            submitBtn.innerHTML = "Submitting...";
 
             // Send to Make.com
             fetch(form.action, {
@@ -998,8 +1076,14 @@
                     form.innerHTML = `
                         <div style="text-align: center; padding: 2rem; animation: fadeInUp 0.5s ease forwards;">
                             <div style="font-size: 3rem; margin-bottom: 1rem;">✨</div>
-                            <h3 style="color: var(--secondary); margin-bottom: 1rem;">You're in the Inner Circle!</h3>
-                            <p style="color: #666;">Thank you for joining the journey. We've recorded your interest and will be in touch with exclusive updates soon.</p>
+                            <h3 style="color: var(--secondary); margin-bottom: 1rem;">Thank You for Your Interest!</h3>
+                            <p style="color: #666; margin-bottom: 1rem;">We've received your information and will be in touch within 24-48 hours to:</p>
+                            <ul style="list-style: none; color: #666; text-align: left; max-width: 500px; margin: 0 auto;">
+                                <li style="padding: 0.5rem 0;">✓ Share the complete pitch deck and legal documents</li>
+                                <li style="padding: 0.5rem 0;">✓ Answer any questions you have</li>
+                                <li style="padding: 0.5rem 0;">✓ Schedule a conversation if you'd like to discuss further</li>
+                            </ul>
+                            <p style="color: #666; margin-top: 1.5rem; font-style: italic;">No pressure, no commitment—just information and conversation.</p>
                         </div>
                     `;
                 } else {
@@ -1009,8 +1093,8 @@
             .catch(error => {
                 console.error('Error:', error);
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = "Try Again →";
-                alert("There was an error. Please try again.");
+                submitBtn.innerHTML = "Submit Interest (No Payment Required) →";
+                alert("There was an error submitting your interest. Please try again or email us directly.");
             });
         });
     </script>
