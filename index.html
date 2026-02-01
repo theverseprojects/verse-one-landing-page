@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VERSE ONE: The Shearer’s Gospel — Faith Animation Investment</title>
+    <title>VERSE ONE: The Shearer's Gospel — Faith Animation Investment</title>
     <meta name="description" content=" Support VERSE ONE, a 13-minute animated faith film—one verse in a larger story God is telling through culture. Join the story, one verse at a time.">
     
     <style>
@@ -49,6 +49,11 @@
             padding: 2rem;
             position: relative;
             overflow: hidden;
+            /* IMAGE SUPPORT: Add background image here */
+            background-image: url('https://lh3.googleusercontent.com/d/1CMhakGUjI2UJTt4Sjqgcy1maFL53iaun=w2000');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .hero::before {
@@ -60,6 +65,20 @@
             bottom: 0;
             background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 50 L50 0 L100 50 L50 100 Z" fill="rgba(212,165,116,0.1)"/></svg>') repeat;
             opacity: 0.1;
+        }
+
+        /* DARK OVERLAY: Ensures text is always readable over any image */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(deg, 
+                rgba(44, 44, 44, 0.75) 0%, 
+                rgba(40, 40, 97, 0.75) 100%);
+            z-index: 0;
         }
 
         .hero-content {
@@ -611,13 +630,12 @@
             <p style="text-align: right; font-style: italic; color: var(--primary); margin-bottom: 3rem;">— Matthew 28:18-19</p>
             
             <p class="commission-text">
-                VERSE ONE exists to fulfill this calling through the power of story. We're creating animation that crosses borders, languages, and generations—meeting people where they are with the Gospel presented in ways they've never experienced before.
+                VERSE ONE exists to fulfill this calling through the power of story.
             </p>
 
             <div class="commission-highlight">
-                <h3 style="color: var(--primary); margin-bottom: 1rem;">Why Animation? Why Now?</h3>
+                <h3 style="color: var(--primary); margin-bottom: 1rem;">Why Animation?</h3>
                 <p>Animation transcends cultural barriers. It speaks Aramaic in Syria, English in Manchester, Igbo in Nigeria—all in 13 minutes. While traditional missions face borders and restrictions, digital storytelling goes everywhere the internet reaches.</p>
-                <p style="margin-top: 1rem;"><strong>This is 21st-century missions work.</strong> Your support doesn't just fund a film—it funds the gospel.</p>
             </div>
 
             <p class="commission-text" style="font-size: 1.3rem; font-weight: 600;">
@@ -707,98 +725,49 @@
         </div>
     </section>
 
-    <!-- Why Section -->
-    <section class="why" id="why">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why This Story. Why Now.</h2>
-            </div>
-            
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon">🎭</div>
-                    <h3>Faith Cinema Is Breaking Ground</h3>
-                    <p>We are exploring new opportunities for Christian filmmaking to reach a new generation. With Angel, Sunrise, and Kingdom Story paving the way, imaginative Christian filmmakers like us are telling never-before-told stories about our faith.</p>
-                </div>
-                
-                <div class="why-card">
-                    <div class="why-icon">🌍</div>
-                    <h3>A New Way Forward</h3>
-                    <p>VERSE ONE doesn't preach—it experiences. Through cinematic animation, we journey across continents (Manchester → Syria → South Africa → beyond) and languages (English, Aramaic, Igbo) to show Jesus meeting people where they are.</p>
-                </div>
-                
-                <div class="why-card">
-                    <div class="why-icon">🎯</div>
-                    <h3>Built to Reach the Unreached</h3>
-                    <p>13 minutes designed for festival circuits, streaming platforms, and viral reach. This isn't just a film—it's proof of concept for an anthology series that shows faith as it actually is: diverse, complicated, and beautiful.</p>
-                </div>
-            </div>
-
-            <div class="quote">
-                <p>"We are not just making a film; we are capturing the heart of a new generation."</p>
-                <cite>— Oyakhire Russel, Creator</cite>
-            </div>
-        </div>
-    </section>
-
     <!-- Returns Section -->
     <section class="returns-section">
         <div class="container">
             <div class="section-header">
-                <h2>If This Project Generates Revenue</h2>
-                <p style="margin-top: 1rem;">Kingdom impact is the primary goal. But if the project generates revenue, here's how returns could come:</p>
+                <h2>Distribution Pathway & Return Expectations</h2>
+                <p style="margin-top: 1rem;">Here's the specific, step-by-step plan to get VERSE ONE distributed and generate returns.</p>
             </div>
 
-            <div class="returns-grid">
-                <div class="return-stream">
-                    <h4>Festival Prize Money</h4>
-                    <p>Major animation festivals award substantial cash prizes</p>
-                    <ul>
-                        <li>Sundance, Annecy, SXSW awards</li>
-                        <li>Faith film festival prizes</li>
-                        <li>International animation competitions</li>
-                    </ul>
+            <!-- THE 3-PHASE DISTRIBUTION PLAN -->
+            <div class="distribution-phases" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
+                <div class="phase-card" style="background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--primary);">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Phase 1: Production (Months 1-9)</h3>
+                    <p>Complete 13-minute animated film with festival-ready quality. Deliverables: DCP, streaming formats, press kit, 5-language captions.</p>
                 </div>
 
-                <div class="return-stream">
-                    <h4>Streaming Licensing</h4>
-                    <p>Platforms pay licensing fees for quality content</p>
-                    <ul>
-                        <li>Angel Studios distribution</li>
-                        <li>Netflix, Amazon Prime, Hulu</li>
-                        <li>Faith-based streaming networks</li>
-                    </ul>
+                <div class="phase-card" style="background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--accent);">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Phase 2: Festival Circuit (Months 10-18)</h3>
+                    <p><strong>Primary targets:</strong> Annecy, Sundance, SXSW, International Christian Film Festival. Goal: Win $5K-$50K in prizes + attract distributor attention.</p>
                 </div>
 
-                <div class="return-stream">
-                    <h4>International Distribution</h4>
-                    <p>Animation travels globally—foreign markets license heavily</p>
-                    <ul>
-                        <li>European broadcasters</li>
-                        <li>African networks</li>
-                        <li>Asian streaming platforms</li>
-                    </ul>
+                <div class="phase-card" style="background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--secondary);">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Phase 3: Distribution Deals (Months 12-24)</h3>
+                    <p style="margin-bottom: 0.75rem;"><strong>Path A:</strong> Angel Studios (our #1 target) - 50/50 revenue split, $50K-$200K potential.</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>Path B:</strong> Major streaming (Netflix, Amazon, Hulu) - $15K-$100K licensing fees.</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>Path C:</strong> Faith networks (Pure Flix, TBN+) - $10K-$60K over 2-3 years.</p>
+                    <p style="margin-bottom: 0.75rem;"><p><strong>Path D:</strong> International sales (Africa, Europe, Asia) - $10K-$80K over 3-4 years.</p>
+                    <p style="margin-bottom: 0.75rem;"><p><strong>Path E:</strong>YouTube (Freemium) Free viewing + ad revenue, donations | $5K-$25K over 3-5 years.</p>
                 </div>
+            </div>
 
-                <div class="return-stream">
-                    <h4>Merchandise & IP Licensing</h4>
-                    <p>Characters, designs, and story elements can be licensed</p>
-                    <ul>
-                        <li>Book adaptations</li>
-                        <li>Merchandise rights</li>
-                        <li>Educational content licensing</li>
-                    </ul>
-                </div>
-
-                <div class="return-stream">
-                    <h4>Series Pickup</h4>
-                    <p>If VERSE ONE succeeds, we have 5-7 more "verses" planned</p>
-                    <ul>
-                        <li>Anthology series deals</li>
-                        <li>Feature film adaptation</li>
-                        <li>Expanded universe opportunities</li>
-                    </ul>
-                </div>
+            <!-- MODEST RETURN EXPECTATIONS -->
+            <div class="return-expectations" style="background: #FFF3CD; padding: 2rem; border-radius: 12px; margin: 3rem 0; border: 3px solid #FFC107;">
+                <h3 style="color: #856404; margin-bottom: 1.5rem; font-size: 1.5rem;">📊 Realistic Return Expectations</h3>
+                <ul style="list-style: none; padding-left: 0; margin-bottom: 1.5rem;">
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(133, 100, 4, 0.2);"><strong>Conservative (70% probability):</strong> 0.5x - 1.2x return over 5 years. Most investors see partial return + Kingdom impact.</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(133, 100, 4, 0.2);"><strong>Moderate (20% probability):</strong> 1.2x - 2x return over 4-6 years. Festival wins + strong streaming performance.</li>
+                    <li style="padding: 0.75rem 0;"><strong>Best Case (10% probability):</strong> 2x cap reached in 3-4 years. Multiple platforms + series pickup.</li>
+                </ul>
+                <p style="margin-top: 1.5rem; font-style: italic; color: #856404; font-size: 1rem; line-height: 1.8;">
+                    <strong>Return cap:</strong> Maximum 2x your investment, even if film generates more. 
+                    <strong>Timeline:</strong> Most faith films take 4-6 years to fully monetize. 
+                    <strong>Primary ROI:</strong> Gospel impact, not financial gain.
+                </p>
             </div>
 
             <!-- DISCLAIMER BOX -->
@@ -809,9 +778,6 @@
                 </p>
                 <p>
                     <strong>Only invest what you can afford to lose.</strong> This is a high-risk opportunity. The biggest ROI is Kingdom impact—souls reached, hearts changed, the Gospel spreading globally.
-                </p>
-                <p style="font-size: 1rem; font-style: italic;">
-                    Conservative projections: Modest returns over 2-3 years. Best-case: Strong returns if series pickup or major platform deal occurs. Worst-case: No financial return but Gospel impact achieved.
                 </p>
             </div>
         </div>
@@ -934,7 +900,7 @@
     <div class="container">
         <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
             <h2>Ready To Invest?</h2>
-            <p>If you’re ready, don’t wait. Make your pledge now and secure your place in bringing this story to life.</p>
+            <p>If you're ready, don't wait. Make your pledge now and secure your place in bringing this story to life.</p>
         </div>
 
         <!-- Value Propositions -->
@@ -959,8 +925,8 @@
 
             <div class="value-prop" style="text-align: center; background: var(--white); padding: 2rem; border-radius: 12px;">
                 <div class="value-prop-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">📈</div>
-                <h3>ROI Potential</h3>
-                <p>Conservative projections: 40–135% returns over 2–3 years. Upside: Series pickup and feature adaptation.</p>
+                <h3>Capped Returns</h3>
+                <p>Maximum return: 2x your investment over 4-6 years. Kingdom ROI is the primary goal. Financial returns are uncertain but structured to reward patient investors who believe in the mission first.</p>
             </div>
         </div>
 
