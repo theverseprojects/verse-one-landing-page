@@ -9,12 +9,23 @@
     <style>
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--white);
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
         }
 
         :root {
@@ -24,13 +35,6 @@
             --dark: #2C2C2C;
             --light: #FFF8E6;
             --white: #FFFFFF;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background: var(--white);
         }
 
         h1, h2, h3, h4 {
@@ -49,6 +53,7 @@
             padding: 2rem;
             position: relative;
             overflow: hidden;
+            width: 100%;
             /* IMAGE SUPPORT: Add background image here */
             background-image: url('https://lh3.googleusercontent.com/d/1CMhakGUjI2UJTt4Sjqgcy1maFL53iaun=w2000');
             background-size: cover;
@@ -85,6 +90,8 @@
             max-width: 900px;
             position: relative;
             z-index: 1;
+            width: 100%;
+            padding: 0 1rem;
         }
 
         .hero h1 {
@@ -144,11 +151,16 @@
 
         section {
             padding: 5rem 2rem;
+            width: 100%;
+            max-width: 100vw;
+            overflow-x: hidden;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            width: 100%;
+            padding: 0 1rem;
         }
 
         .section-header {
@@ -222,12 +234,14 @@
             align-items: center;
             gap: 2rem;
             margin-bottom: 3rem;
+            flex-wrap: wrap;
         }
 
         .illustration-item {
             flex: 1;
             text-align: center;
             animation: float 3s ease-in-out infinite;
+            min-width: 150px;
         }
 
         .illustration-item:nth-child(2) {
@@ -240,6 +254,7 @@
 
         .illustration-item svg {
             max-width: 200px;
+            width: 100%;
             height: auto;
             filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
         }
@@ -258,6 +273,7 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
             max-width: 800px;
             margin: 0 auto;
+            width: 100%;
         }
 
         @keyframes float {
@@ -378,6 +394,7 @@
             padding: 2rem;
             margin: 3rem auto;
             max-width: 900px;
+            width: 100%;
         }
 
         .disclaimer-box h3 {
@@ -499,6 +516,7 @@
             padding: 2.5rem;
             border-radius: 12px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            width: 100%;
         }
 
         .form-group {
@@ -566,13 +584,109 @@
             font-weight: normal;
         }
 
+        .distribution-phases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .phase-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .return-expectations {
+            background: #FFF3CD;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            border: 3px solid #FFC107;
+        }
+
+        .return-expectations ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .return-expectations li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(133, 100, 4, 0.2);
+        }
+
+        .value-props {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .value-prop {
+            text-align: center;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .tier-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .tier-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .tier-card.featured {
+            border: 3px solid var(--primary);
+            position: relative;
+        }
+
+        .tier-benefits {
+            list-style: none;
+            padding-left: 0;
+            margin: 1.5rem 0;
+        }
+
+        .tier-benefits li {
+            padding: 0.5rem 0;
+        }
+
         @media (max-width: 768px) {
             section {
-                padding: 3rem 1.5rem;
+                padding: 3rem 1rem;
+            }
+
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .hero-content {
+                padding: 0 0.5rem;
+            }
+
+            .btn {
+                padding: 0.875rem 1.5rem;
+                font-size: 1rem;
+                display: block;
+                width: 100%;
+                margin: 0.5rem 0 !important;
             }
 
             .story-illustrations {
                 flex-direction: column;
+            }
+
+            .illustration-item {
+                width: 100%;
             }
 
             .illustration-item svg {
@@ -589,6 +703,34 @@
 
             .why-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .distribution-phases {
+                grid-template-columns: 1fr;
+            }
+
+            .value-props {
+                grid-template-columns: 1fr;
+            }
+
+            .tier-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .interest-form {
+                padding: 1.5rem;
+            }
+
+            .container {
+                padding: 0 0.5rem;
+            }
+
+            .commission-verse {
+                font-size: 1.4rem;
+            }
+
+            .commission-text {
+                font-size: 1rem;
             }
         }
 
@@ -734,34 +876,34 @@
             </div>
 
             <!-- THE 3-PHASE DISTRIBUTION PLAN -->
-            <div class="distribution-phases" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
-                <div class="phase-card" style="background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--primary);">
+            <div class="distribution-phases">
+                <div class="phase-card" style="border-left: 4px solid var(--primary);">
                     <h3 style="color: var(--secondary); margin-bottom: 1rem;">Phase 1: Production (Months 1-9)</h3>
                     <p>Complete 13-minute animated film with festival-ready quality. Deliverables: DCP, streaming formats, press kit, 5-language captions.</p>
                 </div>
 
-                <div class="phase-card" style="background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--accent);">
+                <div class="phase-card" style="border-left: 4px solid var(--accent);">
                     <h3 style="color: var(--secondary); margin-bottom: 1rem;">Phase 2: Festival Circuit (Months 10-18)</h3>
                     <p><strong>Primary targets:</strong> Annecy, Sundance, SXSW, International Christian Film Festival. Goal: Win $5K-$50K in prizes + attract distributor attention.</p>
                 </div>
 
-                <div class="phase-card" style="background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--secondary);">
+                <div class="phase-card" style="border-left: 4px solid var(--secondary);">
                     <h3 style="color: var(--secondary); margin-bottom: 1rem;">Phase 3: Distribution Deals (Months 12-24)</h3>
                     <p style="margin-bottom: 0.75rem;"><strong>Path A:</strong> Angel Studios (our #1 target) - 50/50 revenue split, $50K-$200K potential.</p>
                     <p style="margin-bottom: 0.75rem;"><strong>Path B:</strong> Major streaming (Netflix, Amazon, Hulu) - $15K-$100K licensing fees.</p>
                     <p style="margin-bottom: 0.75rem;"><strong>Path C:</strong> Faith networks (Pure Flix, TBN+) - $10K-$60K over 2-3 years.</p>
-                    <p style="margin-bottom: 0.75rem;"><p><strong>Path D:</strong> International sales (Africa, Europe, Asia) - $10K-$80K over 3-4 years.</p>
-                    <p style="margin-bottom: 0.75rem;"><p><strong>Path E:</strong>YouTube (Freemium) Free viewing + ad revenue, donations | $5K-$25K over 3-5 years.</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>Path D:</strong> International sales (Africa, Europe, Asia) - $10K-$80K over 3-4 years.</p>
+                    <p style="margin-bottom: 0.75rem;"><strong>Path E:</strong> YouTube (Freemium) Free viewing + ad revenue, donations | $5K-$25K over 3-5 years.</p>
                 </div>
             </div>
 
             <!-- MODEST RETURN EXPECTATIONS -->
-            <div class="return-expectations" style="background: #FFF3CD; padding: 2rem; border-radius: 12px; margin: 3rem 0; border: 3px solid #FFC107;">
+            <div class="return-expectations">
                 <h3 style="color: #856404; margin-bottom: 1.5rem; font-size: 1.5rem;">📊 Realistic Return Expectations</h3>
-                <ul style="list-style: none; padding-left: 0; margin-bottom: 1.5rem;">
-                    <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(133, 100, 4, 0.2);"><strong>Conservative (70% probability):</strong> 0.5x - 1.2x return over 5 years. Most investors see partial return + Kingdom impact.</li>
-                    <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(133, 100, 4, 0.2);"><strong>Moderate (20% probability):</strong> 1.2x - 2x return over 4-6 years. Festival wins + strong streaming performance.</li>
-                    <li style="padding: 0.75rem 0;"><strong>Best Case (10% probability):</strong> 2x cap reached in 3-4 years. Multiple platforms + series pickup.</li>
+                <ul>
+                    <li><strong>Conservative (70% probability):</strong> 0.5x - 1.2x return over 5 years. Most investors see partial return + Kingdom impact.</li>
+                    <li><strong>Moderate (20% probability):</strong> 1.2x - 2x return over 4-6 years. Festival wins + strong streaming performance.</li>
+                    <li><strong>Best Case (10% probability):</strong> 2x cap reached in 3-4 years. Multiple platforms + series pickup.</li>
                 </ul>
                 <p style="margin-top: 1.5rem; font-style: italic; color: #856404; font-size: 1rem; line-height: 1.8;">
                     <strong>Return cap:</strong> Maximum 2x your investment, even if film generates more. 
@@ -904,26 +1046,26 @@
         </div>
 
         <!-- Value Propositions -->
-        <div class="value-props" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
-            <div class="value-prop" style="text-align: center; background: var(--white); padding: 2rem; border-radius: 12px;">
+        <div class="value-props">
+            <div class="value-prop">
                 <div class="value-prop-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">💵</div>
                 <h3>Revenue Participation</h3>
                 <p>Proportional returns on festivals, streaming, licensing, merchandise, and international distribution.</p>
             </div>
 
-            <div class="value-prop" style="text-align: center; background: var(--white); padding: 2rem; border-radius: 12px;">
+            <div class="value-prop">
                 <div class="value-prop-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">🎬</div>
                 <h3>Producer Credits</h3>
                 <p>Your name in the credits of films positioned for Sundance, Annecy, and global streaming platforms.</p>
             </div>
 
-            <div class="value-prop" style="text-align: center; background: var(--white); padding: 2rem; border-radius: 12px;">
+            <div class="value-prop">
                 <div class="value-prop-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">🎯</div>
                 <h3>Creative Voice</h3>
                 <p>First-look rights on future VERSE anthology installments—help shape what stories we tell next.</p>
             </div>
 
-            <div class="value-prop" style="text-align: center; background: var(--white); padding: 2rem; border-radius: 12px;">
+            <div class="value-prop">
                 <div class="value-prop-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">📈</div>
                 <h3>Capped Returns</h3>
                 <p>Maximum return: 2x your investment over 4-6 years. Kingdom ROI is the primary goal. Financial returns are uncertain but structured to reward patient investors who believe in the mission first.</p>
@@ -931,14 +1073,14 @@
         </div>
 
         <!-- Tier Cards -->
-        <div class="tier-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+        <div class="tier-cards">
             
             <!-- BELIEVER PATRON -->
-            <div class="tier-card" style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <div class="tier-card">
                 <div class="tier-emoji" style="font-size: 2rem; margin-bottom: 0.5rem;">💛</div>
                 <div class="tier-name" style="font-size: 1.3rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.5rem;">BELIEVER PATRON</div>
                 <div class="tier-price" style="font-size: 1.8rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem;">$1,000 - $2,499</div>
-                <ul class="tier-benefits" style="list-style: none; padding-left: 0; margin: 1.5rem 0;">
+                <ul class="tier-benefits">
                     <li>Revenue share</li>
                     <li>End credits</li>
                     <li>Digital screener</li>
@@ -948,11 +1090,11 @@
             </div>
 
             <!-- COMMUNITY SUPPORTER -->
-            <div class="tier-card" style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <div class="tier-card">
                 <div class="tier-emoji" style="font-size: 2rem; margin-bottom: 0.5rem;">💚</div>
                 <div class="tier-name" style="font-size: 1.3rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.5rem;">COMMUNITY SUPPORTER</div>
                 <div class="tier-price" style="font-size: 1.8rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem;">$2,500 - $4,999</div>
-                <ul class="tier-benefits" style="list-style: none; padding-left: 0; margin: 1.5rem 0;">
+                <ul class="tier-benefits">
                     <li>All Believer Patron benefits</li>
                     <li>Premiere invitation</li>
                     <li>Quarterly updates</li>
@@ -961,11 +1103,11 @@
             </div>
 
             <!-- SUPPORTING INVESTOR -->
-            <div class="tier-card" style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <div class="tier-card">
                 <div class="tier-emoji" style="font-size: 2rem; margin-bottom: 0.5rem;">💙</div>
                 <div class="tier-name" style="font-size: 1.3rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.5rem;">SUPPORTING INVESTOR</div>
                 <div class="tier-price" style="font-size: 1.8rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem;">$5,000 - $9,999</div>
-                <ul class="tier-benefits" style="list-style: none; padding-left: 0; margin: 1.5rem 0;">
+                <ul class="tier-benefits">
                     <li>All Community benefits</li>
                     <li>Early screener (2 weeks)</li>
                     <li>Behind-the-scenes portal</li>
@@ -974,11 +1116,11 @@
             </div>
 
             <!-- ASSOCIATE PRODUCER -->
-            <div class="tier-card" style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <div class="tier-card">
                 <div class="tier-emoji" style="font-size: 2rem; margin-bottom: 0.5rem;">💜</div>
                 <div class="tier-name" style="font-size: 1.3rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.5rem;">ASSOCIATE PRODUCER</div>
                 <div class="tier-price" style="font-size: 1.8rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem;">$10,000 - $19,999</div>
-                <ul class="tier-benefits" style="list-style: none; padding-left: 0; margin: 1.5rem 0;">
+                <ul class="tier-benefits">
                     <li>All Supporting benefits</li>
                     <li>IMDb producer credit</li>
                     <li>WIP animation reels</li>
@@ -988,12 +1130,12 @@
             </div>
 
             <!-- EXECUTIVE PRODUCER (Featured) -->
-            <div class="tier-card featured" style="background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 3px solid var(--primary); position: relative;">
+            <div class="tier-card featured">
                 <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: var(--dark); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">⭐ MOST IMPACTFUL</div>
                 <div class="tier-emoji" style="font-size: 2rem; margin-bottom: 0.5rem;">🧡</div>
                 <div class="tier-name" style="font-size: 1.3rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.5rem;">EXECUTIVE PRODUCER</div>
                 <div class="tier-price" style="font-size: 1.8rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem;">$20,000+</div>
-                <ul class="tier-benefits" style="list-style: none; padding-left: 0; margin: 1.5rem 0;">
+                <ul class="tier-benefits">
                     <li>All Associate benefits</li>
                     <li>Opening credits placement</li>
                     <li>First-look rights on sequels</li>
