@@ -463,12 +463,18 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
+            width: 100%;
         }
 
         .milestone-group h4 {
             margin-bottom: 1rem;
             color: var(--secondary);
             font-size: 1.3rem;
+        }
+
+        .milestone-group {
+            width: 100%;
+            max-width: 100%;
         }
 
         .milestone-group ul {
@@ -731,6 +737,19 @@
 
             .commission-text {
                 font-size: 1rem;
+            }
+
+            .milestones {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .funding-meter {
+                padding: 2rem 1.5rem;
+            }
+
+            .milestone-group {
+                width: 100%;
             }
         }
 
