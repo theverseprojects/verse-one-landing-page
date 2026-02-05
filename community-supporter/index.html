@@ -363,7 +363,6 @@
 
             <form class="investment-form" id="emailForm" action="https://hook.eu1.make.com/2kvucufgna2yvs8dw3fspvmk6tta1nlb" method="POST">
                 <input type="hidden" name="interest" value="2.5k-5k">
-                <input type="hidden" name="title" id="titleField" value="Community Supporter Lead">
                 
                 <div class="form-group">
                     <label for="firstName">First Name</label>
@@ -404,12 +403,6 @@
             e.preventDefault();
             
             const form = this;
-            const firstName = form.querySelector('#firstName').value;
-            const interest = form.querySelector('input[name="interest"]').value;
-            
-            // Set dynamic title for Notion
-            form.querySelector('#titleField').value = `${firstName} - ${interest}`;
-            
             const formData = new FormData(form);
             const submitBtn = form.querySelector('button');
 
