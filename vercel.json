@@ -1,0 +1,24 @@
+{
+  "rewrites": [
+    {
+      "source": "/believer-patron",
+      "destination": "/believer-patron/index.html"
+    },
+    {
+      "source": "/community-supporter",
+      "destination": "/community-supporter/index.html"
+    },
+    {
+      "source": "/supporting-investor",
+      "destination": "/supporting-investor/index.html"
+    },
+    {
+      "source": "/associate-producer",
+      "destination": "/associate-producer/index.html"
+    },
+    {
+      "source": "/executive-producer",
+      "destination": "/executive-producer/index.html"
+    }
+  ]
+}
